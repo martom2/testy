@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="89239" started-at="2019-01-18T13:16:27Z" finished-at="2019-01-18T13:17:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="89239" started-at="2019-01-18T13:16:27Z" finished-at="2019-01-18T13:17:56Z">
+      <class name="projekt.automatyzacja.test.ActivateUserTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.ActivateUserTC@6e1ec318]" name="setUp" is-config="true" duration-ms="37842" started-at="2019-01-18T13:16:27Z" finished-at="2019-01-18T13:17:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="activateUser()[pri:0, instance:projekt.automatyzacja.test.ActivateUserTC@6e1ec318]" name="activateUser" duration-ms="28167" started-at="2019-01-18T13:17:04Z" finished-at="2019-01-18T13:17:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- activateUser -->
+        <test-method status="PASS" signature="verifyInactivationOfUser()[pri:1, instance:projekt.automatyzacja.test.ActivateUserTC@6e1ec318]" name="verifyInactivationOfUser" duration-ms="23182" started-at="2019-01-18T13:17:33Z" depends-on-methods="projekt.automatyzacja.test.ActivateUserTC.activateUser" finished-at="2019-01-18T13:17:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInactivationOfUser -->
+      </class> <!-- projekt.automatyzacja.test.ActivateUserTC -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

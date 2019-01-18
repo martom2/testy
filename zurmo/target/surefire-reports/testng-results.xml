@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="2" failed="3" ignored="0" total="20" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="646981" started-at="2019-01-18T13:43:29Z" finished-at="2019-01-18T13:54:16Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="646981" started-at="2019-01-18T13:43:29Z" finished-at="2019-01-18T13:54:16Z">
+      <class name="projekt.automatyzacja.test.EditContactTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.EditContactTC@7390df]" name="setUp" is-config="true" duration-ms="30951" started-at="2019-01-18T13:44:39Z" finished-at="2019-01-18T13:45:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="editContact()[pri:0, instance:projekt.automatyzacja.test.EditContactTC@7390df]" name="editContact" duration-ms="28243" started-at="2019-01-18T13:45:10Z" finished-at="2019-01-18T13:45:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editContact -->
+        <test-method status="PASS" signature="verifyEditedContact()[pri:1, instance:projekt.automatyzacja.test.EditContactTC@7390df]" name="verifyEditedContact" duration-ms="319" started-at="2019-01-18T13:53:27Z" depends-on-methods="projekt.automatyzacja.test.EditContactTC.editContact" finished-at="2019-01-18T13:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditedContact -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:projekt.automatyzacja.test.EditContactTC@7390df]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-01-18T13:53:27Z" finished-at="2019-01-18T13:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- projekt.automatyzacja.test.EditContactTC -->
+      <class name="projekt.automatyzacja.test.CreateLeadTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateLeadTC@1036eb]" name="setUp" is-config="true" duration-ms="38539" started-at="2019-01-18T13:47:46Z" finished-at="2019-01-18T13:48:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createLead()[pri:0, instance:projekt.automatyzacja.test.CreateLeadTC@1036eb]" name="createLead" duration-ms="15695" started-at="2019-01-18T13:48:25Z" finished-at="2019-01-18T13:48:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="verifyCreatedLead()[pri:1, instance:projekt.automatyzacja.test.CreateLeadTC@1036eb]" name="verifyCreatedLead" duration-ms="417" started-at="2019-01-18T13:53:27Z" depends-on-methods="projekt.automatyzacja.test.CreateLeadTC.createLead" finished-at="2019-01-18T13:53:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatedLead -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateLeadTC@1036eb]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-01-18T13:53:28Z" finished-at="2019-01-18T13:53:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- projekt.automatyzacja.test.CreateLeadTC -->
+      <class name="projekt.automatyzacja.test.CreateOpportunityTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateOpportunityTC@a514f8]" name="setUp" is-config="true" duration-ms="40584" started-at="2019-01-18T13:49:44Z" finished-at="2019-01-18T13:50:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="createOpportunity()[pri:0, instance:projekt.automatyzacja.test.CreateOpportunityTC@a514f8]" name="createOpportunity" duration-ms="9593" started-at="2019-01-18T13:50:24Z" finished-at="2019-01-18T13:50:34Z">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[Element <select id="Opportunity_stage_value" name="Opportunity[stage][value]"> is not clickable at point (548.2250061035156,298) because another element <div class="ui-datepicker-title"> obscures it
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 23588, moz:profile: C:\Windows\Temp\rust_mozpro..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 09c1f310-4979-4e30-90a9-772fa8e026b3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <select id="Opportunity_stage_value" name="Opportunity[stage][value]"> is not clickable at point (548.2250061035156,298) because another element <div class="ui-datepicker-title"> obscures it
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 23588, moz:profile: C:\Windows\Temp\rust_mozpro..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 09c1f310-4979-4e30-90a9-772fa8e026b3
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:120)
+at projekt.automatyzacja.page.CreateOpportunityPage.selectStage(CreateOpportunityPage.java:86)
+at projekt.automatyzacja.test.CreateOpportunityTC.createOpportunity(CreateOpportunityTC.java:85)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray2(ReflectionUtils.java:206)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:160)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:83)
+at org.apache.maven.plugin.surefire.InPluginVMSurefireStarter.runSuitesInProcess(InPluginVMSurefireStarter.java:87)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1132)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:978)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:854)
+at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:130)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:176)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:139)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:70)
+at hudson.remoting.UserRequest.perform(UserRequest.java:212)
+at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+at hudson.remoting.Request$2.run(Request.java:369)
+at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOpportunity -->
+        <test-method status="SKIP" signature="verifyCreatedOpportunity()[pri:1, instance:projekt.automatyzacja.test.CreateOpportunityTC@a514f8]" name="verifyCreatedOpportunity" duration-ms="0" started-at="2019-01-18T13:53:28Z" depends-on-methods="projekt.automatyzacja.test.CreateOpportunityTC.createOpportunity" finished-at="2019-01-18T13:53:28Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CreateOpportunityTC.verifyCreatedOpportunity()[pri:1, instance:projekt.automatyzacja.test.CreateOpportunityTC@a514f8] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CreateOpportunityTC.verifyCreatedOpportunity()[pri:1, instance:projekt.automatyzacja.test.CreateOpportunityTC@a514f8] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray2(ReflectionUtils.java:206)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:160)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:83)
+at org.apache.maven.plugin.surefire.InPluginVMSurefireStarter.runSuitesInProcess(InPluginVMSurefireStarter.java:87)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1132)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:978)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:854)
+at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:130)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:176)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:139)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:70)
+at hudson.remoting.UserRequest.perform(UserRequest.java:212)
+at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+at hudson.remoting.Request$2.run(Request.java:369)
+at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatedOpportunity -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateOpportunityTC@a514f8]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-01-18T13:53:28Z" finished-at="2019-01-18T13:53:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- projekt.automatyzacja.test.CreateOpportunityTC -->
+      <class name="projekt.automatyzacja.test.ActivateUserTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.ActivateUserTC@118ead5]" name="setUp" is-config="true" duration-ms="36784" started-at="2019-01-18T13:52:21Z" finished-at="2019-01-18T13:52:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="activateUser()[pri:0, instance:projekt.automatyzacja.test.ActivateUserTC@118ead5]" name="activateUser" duration-ms="29118" started-at="2019-01-18T13:52:57Z" finished-at="2019-01-18T13:53:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- activateUser -->
+        <test-method status="PASS" signature="verifyInactivationOfUser()[pri:1, instance:projekt.automatyzacja.test.ActivateUserTC@118ead5]" name="verifyInactivationOfUser" duration-ms="10885" started-at="2019-01-18T13:54:05Z" depends-on-methods="projekt.automatyzacja.test.ActivateUserTC.activateUser" finished-at="2019-01-18T13:54:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInactivationOfUser -->
+      </class> <!-- projekt.automatyzacja.test.ActivateUserTC -->
+      <class name="projekt.automatyzacja.test.DeactivateUserTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.DeactivateUserTC@2a2958]" name="setUp" is-config="true" duration-ms="39415" started-at="2019-01-18T13:51:14Z" finished-at="2019-01-18T13:51:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="deactivateUser()[pri:0, instance:projekt.automatyzacja.test.DeactivateUserTC@2a2958]" name="deactivateUser" duration-ms="27372" started-at="2019-01-18T13:51:53Z" finished-at="2019-01-18T13:52:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deactivateUser -->
+        <test-method status="FAIL" signature="verifyDeactivationOfUser()[pri:1, instance:projekt.automatyzacja.test.DeactivateUserTC@2a2958]" name="verifyDeactivationOfUser" duration-ms="36798" started-at="2019-01-18T13:53:28Z" depends-on-methods="projekt.automatyzacja.test.DeactivateUserTC.deactivateUser" finished-at="2019-01-18T13:54:05Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for text ('Incorrect username or password.') to be present in element found by By.id: LoginForm_password_em_ (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text ('Incorrect username or password.') to be present in element found by By.id: LoginForm_password_em_ (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+at projekt.automatyzacja.test.DeactivateUserTC.verifyDeactivationOfUser(DeactivateUserTC.java:96)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray2(ReflectionUtils.java:206)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:160)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:83)
+at org.apache.maven.plugin.surefire.InPluginVMSurefireStarter.runSuitesInProcess(InPluginVMSurefireStarter.java:87)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1132)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:978)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:854)
+at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:130)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:176)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:139)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:70)
+at hudson.remoting.UserRequest.perform(UserRequest.java:212)
+at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+at hudson.remoting.Request$2.run(Request.java:369)
+at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: LoginForm_password_em_
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+at java.util.Optional.orElseThrow(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:398)
+at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:394)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+... 70 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeactivationOfUser -->
+      </class> <!-- projekt.automatyzacja.test.DeactivateUserTC -->
+      <class name="projekt.automatyzacja.test.CreateContactTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateContactTC@10568f]" name="setUp" is-config="true" duration-ms="27652" started-at="2019-01-18T13:43:57Z" finished-at="2019-01-18T13:44:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createContact()[pri:0, instance:projekt.automatyzacja.test.CreateContactTC@10568f]" name="createContact" duration-ms="14379" started-at="2019-01-18T13:44:24Z" finished-at="2019-01-18T13:44:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method status="PASS" signature="verifyCreatedContact()[pri:1, instance:projekt.automatyzacja.test.CreateContactTC@10568f]" name="verifyCreatedContact" duration-ms="367" started-at="2019-01-18T13:53:26Z" depends-on-methods="projekt.automatyzacja.test.CreateContactTC.createContact" finished-at="2019-01-18T13:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatedContact -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateContactTC@10568f]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-01-18T13:53:27Z" finished-at="2019-01-18T13:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- projekt.automatyzacja.test.CreateContactTC -->
+      <class name="projekt.automatyzacja.test.CreateCatalogItemTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateCatalogItemTC@20a30e]" name="setUp" is-config="true" duration-ms="35283" started-at="2019-01-18T13:46:23Z" finished-at="2019-01-18T13:46:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createCatalogItem()[pri:0, instance:projekt.automatyzacja.test.CreateCatalogItemTC@20a30e]" name="createCatalogItem" duration-ms="47787" started-at="2019-01-18T13:46:58Z" finished-at="2019-01-18T13:47:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCatalogItem -->
+        <test-method status="PASS" signature="verifyCreatedCatalogItem()[pri:1, instance:projekt.automatyzacja.test.CreateCatalogItemTC@20a30e]" name="verifyCreatedCatalogItem" duration-ms="240" started-at="2019-01-18T13:53:27Z" depends-on-methods="projekt.automatyzacja.test.CreateCatalogItemTC.createCatalogItem" finished-at="2019-01-18T13:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatedCatalogItem -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:projekt.automatyzacja.test.CreateCatalogItemTC@20a30e]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-01-18T13:53:27Z" finished-at="2019-01-18T13:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- projekt.automatyzacja.test.CreateCatalogItemTC -->
+      <class name="projekt.automatyzacja.test.DeleteLeadTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.DeleteLeadTC@b1a69e]" name="setUp" is-config="true" duration-ms="40023" started-at="2019-01-18T13:48:40Z" finished-at="2019-01-18T13:49:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="deleteLead()[pri:0, instance:projekt.automatyzacja.test.DeleteLeadTC@b1a69e]" name="deleteLead" duration-ms="23490" started-at="2019-01-18T13:49:20Z" finished-at="2019-01-18T13:49:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLead -->
+        <test-method status="PASS" signature="verifyDeletion()[pri:1, instance:projekt.automatyzacja.test.DeleteLeadTC@b1a69e]" name="verifyDeletion" duration-ms="39" started-at="2019-01-18T13:53:28Z" depends-on-methods="projekt.automatyzacja.test.DeleteLeadTC.deleteLead" finished-at="2019-01-18T13:53:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeletion -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:projekt.automatyzacja.test.DeleteLeadTC@b1a69e]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-01-18T13:53:28Z" finished-at="2019-01-18T13:53:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- projekt.automatyzacja.test.DeleteLeadTC -->
+      <class name="projekt.automatyzacja.test.CreateAccountTC">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC@b5c139]" name="setUp" is-config="true" duration-ms="45095" started-at="2019-01-18T13:45:38Z" finished-at="2019-01-18T13:46:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="createAccount()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC@b5c139]" name="createAccount" duration-ms="223" started-at="2019-01-18T13:46:23Z" finished-at="2019-01-18T13:46:23Z">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[Element <a href="/zurmo/app/index.php/accounts/default"> is not clickable at point (85,146) because another element <div class="ui-widget-overlay ui-front"> obscures it
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 3284, moz:profile: C:\Windows\Temp\rust_mozpro..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c9d613ec-a21d-490e-a426-a14cdb2104a2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <a href="/zurmo/app/index.php/accounts/default"> is not clickable at point (85,146) because another element <div class="ui-widget-overlay ui-front"> obscures it
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 3284, moz:profile: C:\Windows\Temp\rust_mozpro..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c9d613ec-a21d-490e-a426-a14cdb2104a2
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at projekt.automatyzacja.page.Menu.accountsButtonClick(Menu.java:50)
+at projekt.automatyzacja.test.CreateAccountTC.createAccount(CreateAccountTC.java:91)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray2(ReflectionUtils.java:206)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:160)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:83)
+at org.apache.maven.plugin.surefire.InPluginVMSurefireStarter.runSuitesInProcess(InPluginVMSurefireStarter.java:87)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1132)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:978)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:854)
+at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:130)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:176)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:139)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:70)
+at hudson.remoting.UserRequest.perform(UserRequest.java:212)
+at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+at hudson.remoting.Request$2.run(Request.java:369)
+at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccount -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC@b5c139]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-01-18T13:53:27Z" finished-at="2019-01-18T13:53:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+        <test-method status="SKIP" signature="verifyCreatedAccount()[pri:1, instance:projekt.automatyzacja.test.CreateAccountTC@b5c139]" name="verifyCreatedAccount" duration-ms="0" started-at="2019-01-18T13:53:27Z" depends-on-methods="projekt.automatyzacja.test.CreateAccountTC.createAccount" finished-at="2019-01-18T13:53:27Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CreateAccountTC.verifyCreatedAccount()[pri:1, instance:projekt.automatyzacja.test.CreateAccountTC@b5c139] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CreateAccountTC.verifyCreatedAccount()[pri:1, instance:projekt.automatyzacja.test.CreateAccountTC@b5c139] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray2(ReflectionUtils.java:206)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:160)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:83)
+at org.apache.maven.plugin.surefire.InPluginVMSurefireStarter.runSuitesInProcess(InPluginVMSurefireStarter.java:87)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1132)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:978)
+at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:854)
+at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+at org.jvnet.hudson.maven3.launcher.Maven35Launcher.main(Maven35Launcher.java:130)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+at jenkins.maven3.agent.Maven35Main.launch(Maven35Main.java:176)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:139)
+at hudson.maven.Maven3Builder.call(Maven3Builder.java:70)
+at hudson.remoting.UserRequest.perform(UserRequest.java:212)
+at hudson.remoting.UserRequest.perform(UserRequest.java:54)
+at hudson.remoting.Request$2.run(Request.java:369)
+at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:72)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCreatedAccount -->
+      </class> <!-- projekt.automatyzacja.test.CreateAccountTC -->
+      <class name="projekt.automatyzacja.test.LoginTC">
+        <test-method status="PASS" signature="setup()[pri:0, instance:projekt.automatyzacja.test.LoginTC@b65bea]" name="setup" is-config="true" duration-ms="16136" started-at="2019-01-18T13:43:29Z" finished-at="2019-01-18T13:43:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginToZurmo()[pri:0, instance:projekt.automatyzacja.test.LoginTC@b65bea]" name="loginToZurmo" duration-ms="11836" started-at="2019-01-18T13:43:45Z" finished-at="2019-01-18T13:43:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToZurmo -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:projekt.automatyzacja.test.LoginTC@b65bea]" name="quitBrowser" is-config="true" duration-ms="0" started-at="2019-01-18T13:43:57Z" finished-at="2019-01-18T13:43:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- projekt.automatyzacja.test.LoginTC -->
+      <class name="projekt.automatyzacja.test.ExportOpportunitiesTC">
+        <test-method status="PASS" signature="setup()[pri:0, instance:projekt.automatyzacja.test.ExportOpportunitiesTC@162ed71]" name="setup" is-config="true" duration-ms="34440" started-at="2019-01-18T13:50:34Z" finished-at="2019-01-18T13:51:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="exportOpportunity()[pri:0, instance:projekt.automatyzacja.test.ExportOpportunitiesTC@162ed71]" name="exportOpportunity" duration-ms="5235" started-at="2019-01-18T13:51:09Z" finished-at="2019-01-18T13:51:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exportOpportunity -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:projekt.automatyzacja.test.ExportOpportunitiesTC@162ed71]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-01-18T13:51:14Z" finished-at="2019-01-18T13:51:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- projekt.automatyzacja.test.ExportOpportunitiesTC -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 3, Errors: 0, Skipped: 2, Time elapsed: 648.24 s <<< FAILURE! - in TestSuite
+createAccount(projekt.automatyzacja.test.CreateAccountTC)  Time elapsed: 0.224 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+Element <a href="/zurmo/app/index.php/accounts/default"> is not clickable at point (85,146) because another element <div class="ui-widget-overlay ui-front"> obscures it
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 3284, moz:profile: C:\Windows\Temp\rust_mozpro..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c9d613ec-a21d-490e-a426-a14cdb2104a2
+	at projekt.automatyzacja.test.CreateAccountTC.createAccount(CreateAccountTC.java:91)
+
+createOpportunity(projekt.automatyzacja.test.CreateOpportunityTC)  Time elapsed: 9.593 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+Element <select id="Opportunity_stage_value" name="Opportunity[stage][value]"> is not clickable at point (548.2250061035156,298) because another element <div class="ui-datepicker-title"> obscures it
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 23588, moz:profile: C:\Windows\Temp\rust_mozpro..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 09c1f310-4979-4e30-90a9-772fa8e026b3
+	at projekt.automatyzacja.test.CreateOpportunityTC.createOpportunity(CreateOpportunityTC.java:85)
+
+verifyDeactivationOfUser(projekt.automatyzacja.test.DeactivateUserTC)  Time elapsed: 36.798 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text ('Incorrect username or password.') to be present in element found by By.id: LoginForm_password_em_ (tried for 30 second(s) with 500 milliseconds interval)
+	at projekt.automatyzacja.test.DeactivateUserTC.verifyDeactivationOfUser(DeactivateUserTC.java:96)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Cannot locate an element using By.id: LoginForm_password_em_
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'DESKTOP-EPR1DQN', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: driver.version: unknown
+	at projekt.automatyzacja.test.DeactivateUserTC.verifyDeactivationOfUser(DeactivateUserTC.java:96)
+
