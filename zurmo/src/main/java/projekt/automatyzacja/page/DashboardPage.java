@@ -17,7 +17,7 @@ public class DashboardPage {
 	By postButton = By.id("savePost");
 	
 // METHODS ON OBJECTS
-	
+
 	public void textPostTextBox(String postText) {
 		driver.findElement(this.postTextBox).sendKeys(postText);
 	}
