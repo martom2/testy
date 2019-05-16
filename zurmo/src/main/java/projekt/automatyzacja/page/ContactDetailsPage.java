@@ -147,6 +147,13 @@ public class ContactDetailsPage {
 		return readPrimaryAddressAllThridLine[2];
 	}
 	
+	public String readPrimaryAddressCountry() {
+		String readPrimaryAddressAll = this.readPrimaryAddressAll();
+		String[] readPrimaryAddressLines = readPrimaryAddressAll.split("\\n");
+		
+		return readPrimaryAddressLines[3];
+	}
+	
 	public String readSecondaryAddressAll() {
 		return driver.findElement(secondaryAddressAll).getText();
 	}
@@ -187,6 +194,13 @@ public class ContactDetailsPage {
 		String[] readSecondaryAddressAllThridLine = readSecondaryAddressLines[2].split(" ");
 		
 		return readSecondaryAddressAllThridLine[2];
+	}
+	
+	public String readSecondaryAddressCountry() {
+		String readSecondaryAddressAll = this.readSecondaryAddressAll();
+		String[] readSecondaryAddressLines = readSecondaryAddressAll.split("\\n");
+		
+		return readSecondaryAddressLines[3];
 	}
 	
 	public String readDescription() {

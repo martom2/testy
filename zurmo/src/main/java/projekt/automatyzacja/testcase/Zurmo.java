@@ -21,6 +21,7 @@ import projekt.automatyzacja.page.ProductsPage;
 import projekt.automatyzacja.page.TopMenuPage;
 import projekt.automatyzacja.page.UserDetailsPage;
 import projekt.automatyzacja.page.UsersPage;
+import projekt.automatyzacja.utility.ExcelUtil;
 
 public class Zurmo {
 
@@ -57,10 +58,6 @@ public class Zurmo {
 		
 		page.clickSignOutLink();
 		
-		
-		
-	
-	
 		
 	}
 	

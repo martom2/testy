@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 08 12:51:53 CET 2019</td>
+<td>Started on:</td><td>Fri Mar 08 12:40:11 CET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>486 seconds (486405 ms)</td>
+<tr><td>Total time:</td><td>171 seconds (171435 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,150 +75,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='projekt.automatyzacja.test.CreateContactTC.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;a href=&quot;/zurmo/app/index.php/contacts/default&quot;&gt; is not clickable at point (85,211.8000030517578) because another element &lt;div class=&quot;ui-widget-overlay ui-front&quot;&gt; obscures it
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 25608, moz:profile: C:\Users\Admin\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 075559e6-7184-4893-9e5e-5d440d8f36cd
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at projekt.automatyzacja.page.Menu.contactsButtonClick(Menu.java:58)
-	at projekt.automatyzacja.test.CreateContactTC.createContact(CreateContactTC.java:91)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1816756435", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1816756435'><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;a href=&quot;/zurmo/app/index.php/contacts/default&quot;&gt; is not clickable at point (85,211.8000030517578) because another element &lt;div class=&quot;ui-widget-overlay ui-front&quot;&gt; obscures it
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 25608, moz:profile: C:\Users\Admin\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 075559e6-7184-4893-9e5e-5d440d8f36cd
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at projekt.automatyzacja.page.Menu.contactsButtonClick(Menu.java:58)
-	at projekt.automatyzacja.test.CreateContactTC.createContact(CreateContactTC.java:91)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>projekt.automatyzacja.test.CreateContactTC@5ce81285</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.CreateContactTC.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector: #zurmoView &gt; div:nth-child(1) &gt; table:nth-child(1) &gt; tbody:nth-child(2) &gt; tr:nth-child(1) &gt; td:nth-child(2) (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
-	at projekt.automatyzacja.test.CreateContactTC.verifyCreatedContact(CreateContactTC.java:140)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.cssSelector: #zurmoView &gt; div:nth-child(1) &gt; table:nth-child(1) &gt; tbody:nth-child(2) &gt; tr:nth-child(1) &gt; td:nth-child(2)
+<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Dr.
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-	... 26 more
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1937209374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1937209374'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector: #zurmoView &gt; div:nth-child(1) &gt; table:nth-child(1) &gt; tbody:nth-child(2) &gt; tr:nth-child(1) &gt; td:nth-child(2) (tried for 30 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
-	at projekt.automatyzacja.test.CreateContactTC.verifyCreatedContact(CreateContactTC.java:140)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.cssSelector: #zurmoView &gt; div:nth-child(1) &gt; table:nth-child(1) &gt; tbody:nth-child(2) &gt; tr:nth-child(1) &gt; td:nth-child(2)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at projekt.automatyzacja.page.CreateContactPage.selectStatus(CreateContactPage.java:113)
+	at projekt.automatyzacja.test.CreateContactTC5.createContact(CreateContactTC5.java:167)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace653345773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace653345773'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Dr.
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
-	at java.util.Optional.orElseThrow(Optional.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:183)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:180)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-	... 26 more
-</pre></div></td>
-<td>31</td>
-<td>projekt.automatyzacja.test.CreateContactTC@5ce81285</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.CreateOpportunityTC.verifyCreatedOpportunity()'><b>verifyCreatedOpportunity</b><br>Test class: projekt.automatyzacja.test.CreateOpportunityTC</td>
-<td><div><pre>java.lang.AssertionError: expected [12/3/18] but found [1/8/19]
-	at projekt.automatyzacja.test.CreateOpportunityTC.verifyCreatedOpportunity(CreateOpportunityTC.java:113)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace378227888", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace378227888'><pre>java.lang.AssertionError: expected [12/3/18] but found [1/8/19]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at projekt.automatyzacja.test.CreateOpportunityTC.verifyCreatedOpportunity(CreateOpportunityTC.java:113)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at projekt.automatyzacja.page.CreateContactPage.selectStatus(CreateContactPage.java:113)
+	at projekt.automatyzacja.test.CreateContactTC5.createContact(CreateContactTC5.java:167)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -245,8 +119,8 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>projekt.automatyzacja.test.CreateOpportunityTC@71423665</td></tr>
+<td>18</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@7748410a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -256,70 +130,59 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='projekt.automatyzacja.test.CreateAccountTC.createAccount()'><b>createAccount</b><br>Test class: projekt.automatyzacja.test.CreateAccountTC</td>
+<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>16</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@4470f8a6</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>19</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@7c83dc97</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@4470f8a6</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
 <td></td>
 <td>13</td>
-<td>projekt.automatyzacja.test.CreateAccountTC@5ec0a365</td></tr>
+<td>projekt.automatyzacja.test.CreateContactTC5@7c83dc97</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='projekt.automatyzacja.test.CreateCatalogItemTC.createCatalogItem()'><b>createCatalogItem</b><br>Test class: projekt.automatyzacja.test.CreateCatalogItemTC</td>
-<td></td>
-<td>47</td>
-<td>projekt.automatyzacja.test.CreateCatalogItemTC@4fe3c938</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.CreateLeadTC.createLead()'><b>createLead</b><br>Test class: projekt.automatyzacja.test.CreateLeadTC</td>
-<td></td>
-<td>15</td>
-<td>projekt.automatyzacja.test.CreateLeadTC@5383967b</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.CreateOpportunityTC.createOpportunity()'><b>createOpportunity</b><br>Test class: projekt.automatyzacja.test.CreateOpportunityTC</td>
-<td></td>
-<td>14</td>
-<td>projekt.automatyzacja.test.CreateOpportunityTC@71423665</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.DeleteLeadTC.deleteLead()'><b>deleteLead</b><br>Test class: projekt.automatyzacja.test.DeleteLeadTC</td>
-<td></td>
-<td>20</td>
-<td>projekt.automatyzacja.test.DeleteLeadTC@2ac273d3</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.EditContactTC.editContact()'><b>editContact</b><br>Test class: projekt.automatyzacja.test.EditContactTC</td>
-<td></td>
-<td>31</td>
-<td>projekt.automatyzacja.test.EditContactTC@78c03f1f</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.ExportOpportunitiesTC.exportOpportunity()'><b>exportOpportunity</b><br>Test class: projekt.automatyzacja.test.ExportOpportunitiesTC</td>
-<td></td>
-<td>4</td>
-<td>projekt.automatyzacja.test.ExportOpportunitiesTC@20398b7c</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.LoginTC.test_Home_Page_Appear_Correct()'><b>test_Home_Page_Appear_Correct</b><br>Test class: projekt.automatyzacja.test.LoginTC</td>
-<td></td>
-<td>12</td>
-<td>projekt.automatyzacja.test.LoginTC@52a86356</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.CreateAccountTC.verifyCreatedAccount()'><b>verifyCreatedAccount</b><br>Test class: projekt.automatyzacja.test.CreateAccountTC</td>
-<td></td>
+<td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td><div><pre>java.lang.Throwable: Method CreateContactTC5.verifyCreatedContact()[pri:1, instance:projekt.automatyzacja.test.CreateContactTC5@7748410a] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2122256138", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2122256138'><pre>java.lang.Throwable: Method CreateContactTC5.verifyCreatedContact()[pri:1, instance:projekt.automatyzacja.test.CreateContactTC5@7748410a] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
 <td>0</td>
-<td>projekt.automatyzacja.test.CreateAccountTC@5ec0a365</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.CreateCatalogItemTC.verifyCreatedCatalogItem()'><b>verifyCreatedCatalogItem</b><br>Test class: projekt.automatyzacja.test.CreateCatalogItemTC</td>
-<td></td>
-<td>0</td>
-<td>projekt.automatyzacja.test.CreateCatalogItemTC@4fe3c938</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.CreateLeadTC.verifyCreatedLead()'><b>verifyCreatedLead</b><br>Test class: projekt.automatyzacja.test.CreateLeadTC</td>
-<td></td>
-<td>0</td>
-<td>projekt.automatyzacja.test.CreateLeadTC@5383967b</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.DeleteLeadTC.verifyDeletion()'><b>verifyDeletion</b><br>Test class: projekt.automatyzacja.test.DeleteLeadTC</td>
-<td></td>
-<td>0</td>
-<td>projekt.automatyzacja.test.DeleteLeadTC@2ac273d3</td></tr>
-<tr>
-<td title='projekt.automatyzacja.test.EditContactTC.verifyEditedContact()'><b>verifyEditedContact</b><br>Test class: projekt.automatyzacja.test.EditContactTC</td>
-<td></td>
-<td>0</td>
-<td>projekt.automatyzacja.test.EditContactTC@78c03f1f</td></tr>
+<td>null</td></tr>
 </table><p>
 </body>
 </html>

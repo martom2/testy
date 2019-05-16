@@ -9,6 +9,9 @@ import projekt.automatyzacja.page.SpecificMenu;
 import projekt.automatyzacja.testcase.LoginAction;
 import projekt.automatyzacja.utility.ExcelUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -22,46 +25,108 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Factory;
 
-public class CreateContactTC {
+
+public class CreateContactTC5 {
 	
 	WebDriver driver;
+	static ExcelUtil excel;
 	Menu menu;
 	SpecificMenu specificMenu;
 	CreateContactPage createContactPage;
 	ContactDetailsPage contactDetailsPage;
 	
-	String politeReturn = "Mr.";
-	String firstName = "Jacek";
-	String lastName = "Pietrus";
-	String status = "Customer";
-	String jobTitle = "Sales Manager";
-	String department = "Sales Department";
-	String officePhone = "+48 71 789 22 56";
-	String source = "Tradeshow";
-	String mobilePhone = "+48 798 502 456";
-	String officeFax = "+48 124 25 89";
-	String primaryEmail = "jacek.pietrus@gmail.com";
-	String secondaryEmail = "jacp@wp.pl";
-	String primaryAddressStreet1 = "ul. Lubińska";
-	String primaryAddressStreet2 = "18/8";
-	String primaryAddressCity = "Gdynia";
-	String primaryAddressState = "Pomorskie";
-	String primaryAddressPostalCode = "68-698";
-	String primaryAddressCountry = "Polska";
-	String secondaryAddressStreet1 = "ul. Jodlana";
-	String secondaryAddressStreet2 = "26/3";
-	String secondaryAddressCity = "Wrocław";
-	String secondaryAddressState = "Dolnośląskie";
-	String secondaryAddressPostalCode = "50-698";
-	String secondaryAddressCountry = "Polska";
-	String description = "Menedżer sprzedaży samochodów";
+	String politeReturn;
+	String firstName;
+	String lastName;
+	String status;
+	String jobTitle;
+	String department;
+	String officePhone;
+	String source;
+	String mobilePhone;
+	String officeFax;
+	String primaryEmail;
+	String secondaryEmail;
+	String primaryAddressStreet1;
+	String primaryAddressStreet2;
+	String primaryAddressCity;
+	String primaryAddressState;
+	String primaryAddressPostalCode;
+	String primaryAddressCountry;
+	String secondaryAddressStreet1;
+	String secondaryAddressStreet2;
+	String secondaryAddressCity;
+	String secondaryAddressState;
+	String secondaryAddressPostalCode;
+	String secondaryAddressCountry;
+	String description;
 	
+	
+	@Factory(dataProvider = "getData")
+	public CreateContactTC5(	String politeReturn,
+								String firstName,
+								String lastName,
+								String status,
+								String jobTitle,
+								String department,
+								String officePhone,
+								String source,
+								String mobilePhone,
+								String officeFax,
+								String primaryEmail,
+								String secondaryEmail,
+								String primaryAddressStreet1,
+								String primaryAddressStreet2,
+								String primaryAddressCity,
+								String primaryAddressState,
+								String primaryAddressPostalCode,
+								String primaryAddressCountry,
+								String secondaryAddressStreet1,
+								String secondaryAddressStreet2,
+								String secondaryAddressCity,
+								String secondaryAddressState,
+								String secondaryAddressPostalCode,
+								String secondaryAddressCountry,
+								String description) 
+	{
+		this.politeReturn = politeReturn;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.status = status;
+		this.jobTitle = jobTitle;
+		this.department = department;
+		this.officePhone = officePhone;
+		this.source = source;
+		this.mobilePhone = mobilePhone;
+		this.officeFax =  officeFax;
+		this.primaryEmail = primaryEmail;
+		this.secondaryEmail = secondaryEmail;
+		this.primaryAddressStreet1 = primaryAddressStreet1;
+		this.primaryAddressStreet2 = primaryAddressStreet2;
+		this.primaryAddressCity = primaryAddressCity;
+		this.primaryAddressState = primaryAddressState;
+		this.primaryAddressPostalCode = primaryAddressPostalCode;
+		this.primaryAddressCountry = primaryAddressCountry;
+		this.secondaryAddressStreet1 = secondaryAddressStreet1;
+		this.secondaryAddressStreet2 = secondaryAddressStreet2;
+		this.secondaryAddressCity = secondaryAddressCity;
+		this.secondaryAddressState = secondaryAddressState;
+		this.secondaryAddressPostalCode = secondaryAddressPostalCode;
+		this.secondaryAddressCountry = secondaryAddressCountry;
+		this.description = description;
+	}
+	
+  
   @BeforeClass
   public void setUp() {
-  	System.setProperty("webdriver.gecko.driver", "C:\\javalibs\\geckodriver-v0.20.1-win32\\geckodriver.exe");
+	  
+	System.setProperty("webdriver.gecko.driver", "C:\\javalibs\\geckodriver-v0.20.1-win32\\geckodriver.exe");
 	
   	FirefoxProfile profile = new FirefoxProfile();
 	profile.setPreference("security.sandbox.content.level", 5);
@@ -80,7 +145,7 @@ public class CreateContactTC {
 	
     (new WebDriverWait(driver, 30)).until(ExpectedConditions.presenceOfElementLocated(By.linkText("Home")));
 	
-    ExcelUtil excel = new ExcelUtil("createContact.xlsx", "Arkusz1");
+   // excel = new ExcelUtil("createContact.xlsx", "Arkusz1");
     
   }
 	
@@ -95,7 +160,7 @@ public class CreateContactTC {
 	  
       specificMenu = new SpecificMenu(driver);
 	  specificMenu.clickCreate();
-	  
+
 	  createContactPage = new CreateContactPage(driver);
 	  createContactPage.selectPoliteReturn(this.politeReturn);
 	  createContactPage.textFirstName(this.firstName);
@@ -142,7 +207,6 @@ public class CreateContactTC {
 	  
 	  (new WebDriverWait(driver, 30)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)"))); 
 	  
-	  
 	  Assert.assertEquals(contactDetailsPage.readName(), this.politeReturn+" "+this.firstName+" "+this.lastName);
 	  Assert.assertEquals(contactDetailsPage.readStatus(), this.status);
 	  Assert.assertEquals(contactDetailsPage.readJobTitle(), this.jobTitle);
@@ -165,13 +229,83 @@ public class CreateContactTC {
 	  Assert.assertEquals(contactDetailsPage.readSecondaryAddressPostalCode(), this.secondaryAddressPostalCode);
 	  Assert.assertEquals(contactDetailsPage.readDescription(), this.description);
 	
-	  
-
   }
   
   @AfterClass
   public void afterSuite() {
 	 // driver.quit();
+  }
+  
+//  @DataProvider
+//  private static String[][] getData(ITestContext context) {
+//
+//	  excel = new ExcelUtil("createContact.xlsx", "Arkusz2"); 
+//	  
+//      int rowsNumber = excel.getNumberOfRows();
+//      int cellsNumber = excel.getNumberOfCellsInARow(0);
+//	  String[][] returnValues = new String[rowsNumber-1][cellsNumber];
+//	  System.out.println("ROWS ROWS ROWS "+rowsNumber);
+//      
+//      for(int i = 0; i < rowsNumber-1; i++) //Loop work for Rows
+//      {            
+//          for (int j = 0; j < cellsNumber; j++) //Loop work for colNum
+//          {
+//             String jCell = excel.getCellData(i+1, j); 
+//             
+//             if(jCell == "")
+//                 returnValues[i][j] = "Dr."; //if it get Null value it pass no data 
+//             else
+//                  {
+//                      returnValues[i][j] = jCell; //This formatter get my all values as string i.e integer, float all type data value
+//                  }
+//              }
+//          }
+//      
+//      return returnValues;   
+//  }
+  
+  
+  @DataProvider
+  private static String[][] getData(ITestContext context) {
+
+	  excel = new ExcelUtil("createContact.xlsx", "Arkusz2"); 
+	  
+      int rowsNumber = excel.getNumberOfRows();
+      int cellsNumber = excel.getNumberOfCellsInARow(0);
+      
+	  System.out.println("ROWS ROWS ROWS "+rowsNumber);
+      
+	  List<List<String>> excelData = new ArrayList<List<String>>();
+	  
+      for(int i = 0; i < rowsNumber-1; i++) //Loop work for Rows
+      {            
+    	  List<String> sublist = new ArrayList<String>();
+    	  
+          for (int j = 0; j < cellsNumber; j++) //Loop work for colNum
+          {
+             String jCell = excel.getCellData(i+1, j); 
+          
+             if(jCell == "") sublist.add(null);
+             else sublist.add(jCell);       
+           }
+          
+          boolean nullsOnly = sublist.stream().noneMatch(Objects::nonNull);
+          if (!nullsOnly) excelData.add(sublist);
+      }
+      
+      
+      String[][] returnValues = new String[excelData.size()][cellsNumber];
+      
+      for(int i = 0; i < excelData.size(); i++) //Loop work for Rows
+      {            
+          for (int j = 0; j < cellsNumber; j++) //Loop work for colNum
+          {
+             String jCell = excelData.get(i).get(j);          
+         	 returnValues[i][j] = jCell; //This formatter get my all values as string i.e integer, float all type data value
+                  
+           }
+      }
+      return returnValues;   
   }
 
 }

@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="89136" started-at="2019-01-19T11:54:15Z" finished-at="2019-01-19T11:55:44Z">
+  <suite name="Default suite" duration-ms="89747" started-at="2019-05-16T07:24:01Z" finished-at="2019-05-16T07:25:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="89136" started-at="2019-01-19T11:54:15Z" finished-at="2019-01-19T11:55:44Z">
-      <class name="projekt.automatyzacja.test.CreateContactTC">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateContactTC@2038ae61]" name="setUp" is-config="true" duration-ms="45078" started-at="2019-01-19T11:54:15Z" finished-at="2019-01-19T11:55:00Z">
+    <test name="Default test" duration-ms="89747" started-at="2019-05-16T07:24:01Z" finished-at="2019-05-16T07:25:31Z">
+      <class name="projekt.automatyzacja.test.CreateAccountTC3">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="setUp" is-config="true" duration-ms="40219" started-at="2019-05-16T07:24:01Z" finished-at="2019-05-16T07:24:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createContact()[pri:0, instance:projekt.automatyzacja.test.CreateContactTC@2038ae61]" name="createContact" duration-ms="23069" started-at="2019-01-19T11:55:00Z" finished-at="2019-01-19T11:55:23Z">
+        <test-method status="PASS" signature="createAccount()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="createAccount" duration-ms="49025" started-at="2019-05-16T07:24:41Z" finished-at="2019-05-16T07:25:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContact -->
-        <test-method status="PASS" signature="verifyCreatedContact()[pri:1, instance:projekt.automatyzacja.test.CreateContactTC@2038ae61]" name="verifyCreatedContact" duration-ms="20956" started-at="2019-01-19T11:55:23Z" depends-on-methods="projekt.automatyzacja.test.CreateContactTC.createContact" finished-at="2019-01-19T11:55:44Z">
+        </test-method> <!-- createAccount -->
+        <test-method status="PASS" signature="verifyCreatedAccount()[pri:1, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="verifyCreatedAccount" duration-ms="464" started-at="2019-05-16T07:25:31Z" depends-on-methods="projekt.automatyzacja.test.CreateAccountTC3.createAccount" finished-at="2019-05-16T07:25:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreatedContact -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateContactTC@2038ae61]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-01-19T11:55:44Z" finished-at="2019-01-19T11:55:44Z">
+        </test-method> <!-- verifyCreatedAccount -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-05-16T07:25:31Z" finished-at="2019-05-16T07:25:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- projekt.automatyzacja.test.CreateContactTC -->
+      </class> <!-- projekt.automatyzacja.test.CreateAccountTC3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

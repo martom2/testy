@@ -3,9 +3,11 @@
 
 <suite name="Suite">
   <test thread-count="9" name="Test" preserve-order="true">
+  <parameter name="excelRowNumber" value="1, 2"/>
+ 
     <classes>
-      <class name="projekt.automatyzacja.test.LoginTC"/>
-      <class name="projekt.automatyzacja.test.CreateContactTC"/>
+     <!--  <class name="projekt.automatyzacja.test.LoginTC"/>
+      <class name="projekt.automatyzacja.test.CreateContactTC2"/>
       <class name="projekt.automatyzacja.test.EditContactTC"/>
       <class name="projekt.automatyzacja.test.CreateAccountTC"/>
       <class name="projekt.automatyzacja.test.CreateCatalogItemTC"/>
@@ -15,6 +17,9 @@
       <class name="projekt.automatyzacja.test.ExportOpportunitiesTC"/>
       <class name="projekt.automatyzacja.test.DeactivateUserTC"/>
       <class name="projekt.automatyzacja.test.ActivateUserTC"/>
+      <class name="projekt.automatyzacja.test.CreateAccountTC2"/> -->
+      <class name="projekt.automatyzacja.test.CreateContactTC5" />
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

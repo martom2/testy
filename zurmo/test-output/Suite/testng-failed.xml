@@ -2,22 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
+    <parameter name="excelRowNumber" value="1, 2"/>
     <classes>
-      <class name="projekt.automatyzacja.test.CreateOpportunityTC">
+      <class name="projekt.automatyzacja.test.CreateContactTC5">
         <methods>
-          <include name="verifyCreatedOpportunity"/>
-          <include name="setUp"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- projekt.automatyzacja.test.CreateOpportunityTC -->
-      <class name="projekt.automatyzacja.test.CreateContactTC">
-        <methods>
-          <include name="setUp"/>
           <include name="createContact"/>
           <include name="afterSuite"/>
           <include name="verifyCreatedContact"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- projekt.automatyzacja.test.CreateContactTC -->
+      </class> <!-- projekt.automatyzacja.test.CreateContactTC5 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

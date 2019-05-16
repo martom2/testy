@@ -85,12 +85,20 @@ public class CreateContactPage {
 		driver.findElement(this.firstName).sendKeys(first_name);
 	}
 	
+	public String getTextedFirstName() {
+		return driver.findElement(this.firstName).getText();
+	}
+	
 	public void clearFirstName() {
 		driver.findElement(this.firstName).clear();
 	}
 	
 	public void textLastName(String last_name) {
 		driver.findElement(this.lastName).sendKeys(last_name);
+	}
+	
+	public String getTextedLastName() {
+		return driver.findElement(this.lastName).getText();
 	}
 	
 	public void clearLastName() {

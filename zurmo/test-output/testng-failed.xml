@@ -3,12 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projekt.automatyzacja.test.InactiveUserTC">
+      <class name="projekt.automatyzacja.test.CreateAccountTC3">
         <methods>
-          <include name="verifyInactivationOfUser"/>
+          <include name="createAccount"/>
           <include name="setUp"/>
+          <include name="verifyCreatedAccount"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- projekt.automatyzacja.test.InactiveUserTC -->
+      </class> <!-- projekt.automatyzacja.test.CreateAccountTC3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
