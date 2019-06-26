@@ -32,7 +32,7 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 
-public class CreateCatalogItemTC2 {
+public class CreateCatalogItemTC {
 	
 	
 	private WebDriver driver;
@@ -59,7 +59,7 @@ public class CreateCatalogItemTC2 {
 
   
     @Factory(dataProvider = "getData")
-    public CreateCatalogItemTC2(    String name,
+    public CreateCatalogItemTC(    String name,
 								    String description,
 								    String categories,
 								    String status,

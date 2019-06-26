@@ -30,7 +30,7 @@ import projekt.automatyzacja.page.SpecificMenu;
 import projekt.automatyzacja.testcase.LoginAction;
 import projekt.automatyzacja.utility.ExcelUtil;
 
-public class CreateOpportunityTC2 {
+public class CreateOpportunityTC {
 
 	private WebDriver driver;
 	private static ExcelUtil excel;
@@ -50,7 +50,7 @@ public class CreateOpportunityTC2 {
 	
 	
     @Factory(dataProvider = "getData")
-    public CreateOpportunityTC2(    String name,
+    public CreateOpportunityTC(    String name,
 						    	    String amountCurrency,
 						    	    String amountValue,
 						    	    String closeDate,

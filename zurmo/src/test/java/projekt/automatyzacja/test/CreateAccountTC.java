@@ -33,7 +33,7 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 
-public class CreateAccountTC3 {
+public class CreateAccountTC {
 
 	private WebDriver driver;
 	private static ExcelUtil excel;
@@ -67,7 +67,7 @@ public class CreateAccountTC3 {
 
     
     @Factory(dataProvider = "getData")
-    public CreateAccountTC3(	String name,
+    public CreateAccountTC(	String name,
     							String officePhone,
     							String industry,
     							String officeFax,

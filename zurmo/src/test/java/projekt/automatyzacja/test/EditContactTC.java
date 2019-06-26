@@ -31,7 +31,7 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 
-public class EditContactTC2 {
+public class EditContactTC {
   
 	private WebDriver driver;
 	private static ExcelUtil excel;
@@ -69,7 +69,7 @@ public class EditContactTC2 {
 	
 	
 	@Factory(dataProvider = "getData")
-	public EditContactTC2(	String politeReturn,
+	public EditContactTC(	String politeReturn,
 							String firstName,
 							String lastName,
 							String status,

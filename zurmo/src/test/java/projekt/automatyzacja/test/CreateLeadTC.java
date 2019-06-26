@@ -32,7 +32,7 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 
-public class CreateLeadTC2 {
+public class CreateLeadTC {
 
 	private WebDriver driver;
 	private static ExcelUtil excel;
@@ -72,7 +72,7 @@ public class CreateLeadTC2 {
 	  private String industry;
 	  
 	  @Factory(dataProvider = "getData")
-	  public CreateLeadTC2(	  String politeReturn,
+	  public CreateLeadTC(	  String politeReturn,
 							  String firstName,
 							  String lastName,
 							  String status,
