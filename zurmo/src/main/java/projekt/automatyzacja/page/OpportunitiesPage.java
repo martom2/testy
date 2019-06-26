@@ -1,8 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class OpportunitiesPage {
 
@@ -10,40 +11,45 @@ public class OpportunitiesPage {
 	
 	public OpportunitiesPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 //LOCATED OBJEDCTS
 	
-	By searchBar = By.id("OpportunitiesSearchForm_anyMixedAttributes");
+	@FindBy(id="OpportunitiesSearchForm_anyMixedAttributes")
+	WebElement searchBar;
 	
-	By firstTableCheckbox = By.cssSelector("tr.odd:nth-child(1) > td:nth-child(1) > label:nth-child(1)");
+	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(1) > label:nth-child(1)")
+	WebElement firstTableCheckbox;
 	
-	By tableFirsyNamePosition = By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)");
-
+	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)")
+	WebElement tableFirsyNamePosition;
 	
 //METHODS ON LOCATED OBJECTS
 	
+
 	public void textSearchBar(String searchText) {
-		driver.findElement(this.searchBar).sendKeys(searchText);
+		this.searchBar.sendKeys(searchText);
 	}
 	
 	public void clickSearchBar() {
-		driver.findElement(this.searchBar).click();
+		this.searchBar.click();
 	}
 	
 	public void selectFirstTableCheckbox() {
-		driver.findElement(this.firstTableCheckbox).click();
+		this.firstTableCheckbox.click();
 	}
 	
 	public String readTableFirstNamePosition() {
-		return driver.findElement(this.tableFirsyNamePosition).getText();
+		return this.tableFirsyNamePosition.getText();
 	}
 	
 	public WebElement returnTableFirstNamePositionElement() {
-		return driver.findElement(this.tableFirsyNamePosition);
+		return this.tableFirsyNamePosition;
 	}
 	
 	public void clickTableFirstNamePosition() {
-		driver.findElement(this.tableFirsyNamePosition).click();
+		this.tableFirsyNamePosition.click();
 	}
+	
 }

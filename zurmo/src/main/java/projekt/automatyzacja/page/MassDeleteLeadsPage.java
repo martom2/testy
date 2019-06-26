@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MassDeleteLeadsPage {
 
@@ -9,13 +11,16 @@ public class MassDeleteLeadsPage {
 	
 	public MassDeleteLeadsPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
-	By deleteButton = By.id("deleteyt2");
+	
+	@FindBy(id="deleteyt2")
+	WebElement deleteButton;
 	
 // METHODSD ON LOCATED OBJECTS
 	public void clickDeleteButton() {
-		driver.findElement(this.deleteButton).click();
+		this.deleteButton.click();
 	}
 }

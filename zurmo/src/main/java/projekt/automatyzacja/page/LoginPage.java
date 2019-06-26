@@ -1,6 +1,8 @@
 package projekt.automatyzacja.page;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 	
@@ -8,30 +10,35 @@ public class LoginPage {
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
-	By userName = By.id("LoginForm_username");
+    @FindBy(id="LoginForm_username")
+	WebElement userName;
 
-	By password = By.id("LoginForm_password");
+    @FindBy(id="LoginForm_password")
+	WebElement password;
 	
-	By signIn = By.id("Login");
+	@FindBy(id="Login")
+	WebElement signIn;
 	
-	By passwordMessage = By.id("LoginForm_password_em_");
+	@FindBy(id="LoginForm_password_em_")
+	WebElement passwordMessage;
 	   
 // METHODS ON OBJECTS
 	  
     public void setUserName(String strUserName){
-        driver.findElement(this.userName).sendKeys(strUserName);
+        this.userName.sendKeys(strUserName);
     }
 
     public void setPassword(String strPassword){
-         driver.findElement(this.password).sendKeys(strPassword);
+         this.password.sendKeys(strPassword);
     }
 
     public void clickSignIn(){
-         driver.findElement(this.signIn).click();
+         this.signIn.click();
     }
     
     public String getPageTitle() {
@@ -39,7 +46,7 @@ public class LoginPage {
     }
     
     public String getPasswordMessage() {
-    	return driver.findElement(this.passwordMessage).getText();
+    	return this.passwordMessage.getText();
     }
     
 //GROUP METHODS

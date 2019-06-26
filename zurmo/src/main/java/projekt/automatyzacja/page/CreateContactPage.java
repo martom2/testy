@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateContactPage {
@@ -10,298 +12,333 @@ public class CreateContactPage {
 	
 	public CreateContactPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
-	By politeReturn = By.id("Contact_title_value");
-	By firstName = By.id("Contact_firstName");
-	By lastName = By.id("Contact_lastName");
+	@FindBy(id="Contact_title_value")
+	WebElement politeReturn;
 	
-	By status = By.id("Contact_state_id");
+	@FindBy(id="Contact_firstName")
+	WebElement firstName;
 	
-	By jobTitle = By.id("Contact_jobTitle");
+	@FindBy(id="Contact_lastName")
+	WebElement lastName;
 	
-	By account = By.id("Contact_account_name");
-	By accountSearch = By.id("Contact_account_SelectLink");
+	@FindBy(id="Contact_state_id")
+	WebElement status;
 	
-	By department = By.id("Contact_department");
+	@FindBy(id="Contact_jobTitle")
+	WebElement jobTitle;
 	
-	By officePhone = By.id("Contact_officePhone");
+	@FindBy(id="Contact_account_name")
+	WebElement account;
 	
-	By source = By.id("Contact_source_value");
+	@FindBy(id="Contact_account_SelectLink")
+	WebElement accountSearch;
 	
-	By mobilePhone = By.id("Contact_mobilePhone");
+	@FindBy(id="Contact_department")
+	WebElement department;
 	
-	By officeFax = By.id("Contact_officeFax");
+	@FindBy(id="Contact_officePhone")
+	WebElement officePhone;
 	
-	By primaryEmail = By.id("Contact_primaryEmail_emailAddress");
+	@FindBy(id="Contact_source_value")
+	WebElement source;
 	
-	By primaryEmailCheckbox = By.id("Contact_primaryEmail_optOut");
+	@FindBy(id="Contact_mobilePhone")
+	WebElement mobilePhone;
 	
-	By secondaryEmail = By.id("Contact_secondaryEmail_emailAddress");
+	@FindBy(id="Contact_officeFax")
+	WebElement officeFax;
 	
-	By primaryAddressStreet1 = By.id("Contact_primaryAddress_street1");
+	@FindBy(id="Contact_primaryEmail_emailAddress")
+	WebElement primaryEmail;
 	
-	By primaryAddressStreet2 = By.id("Contact_primaryAddress_street2");
+	@FindBy(id="Contact_primaryEmail_optOut")
+	WebElement primaryEmailCheckbox;
 	
-	By primaryAddressCity = By.id("Contact_primaryAddress_city");
+	@FindBy(id="Contact_secondaryEmail_emailAddress")
+	WebElement secondaryEmail;
 	
-	By primaryAddressState = By.id("Contact_primaryAddress_state");
+	@FindBy(id="Contact_primaryAddress_street1")
+	WebElement primaryAddressStreet1;
 	
-	By primaryAddressPostalCode = By.id("Contact_primaryAddress_postalCode");
+	@FindBy(id="Contact_primaryAddress_street2")
+	WebElement primaryAddressStreet2;
 	
-	By primaryAddressCountry = By.id("Contact_primaryAddress_country");
+	@FindBy(id="Contact_primaryAddress_city")
+	WebElement primaryAddressCity;
 	
-	By secondaryAddressStreet1 = By.id("Contact_secondaryAddress_street1");
+	@FindBy(id="Contact_primaryAddress_state")
+	WebElement primaryAddressState;
 	
-	By secondaryAddressStreet2 = By.id("Contact_secondaryAddress_street2");
+	@FindBy(id="Contact_primaryAddress_postalCode")
+	WebElement primaryAddressPostalCode;
 	
-	By secondaryAddressCity = By.id("Contact_secondaryAddress_city");
+	@FindBy(id="Contact_primaryAddress_country")
+	WebElement primaryAddressCountry;
 	
-	By secondaryAddressState = By.id("Contact_secondaryAddress_state");
+	@FindBy(id="Contact_secondaryAddress_street1")
+	WebElement secondaryAddressStreet1;
 	
-	By secondaryAddressPostalCode = By.id("Contact_secondaryAddress_postalCode");
+	@FindBy(id="Contact_secondaryAddress_street2")
+	WebElement secondaryAddressStreet2;
 	
-	By secondaryAddressCountry = By.id("Contact_secondaryAddress_country");
+	@FindBy(id="Contact_secondaryAddress_city")
+	WebElement secondaryAddressCity;
 	
-	By description = By.id("Contact_description");
+	@FindBy(id="Contact_secondaryAddress_state")
+	WebElement secondaryAddressState;
 	
-	By saveButton = By.linkText("Save");
+	@FindBy(id="Contact_secondaryAddress_postalCode")
+	WebElement secondaryAddressPostalCode;
 	
-	By cancelButton = By.linkText("Cancel");
+	@FindBy(id="Contact_secondaryAddress_country")
+	WebElement secondaryAddressCountry;
 	
+	@FindBy(id="Contact_description")
+	WebElement description;
+	
+	@FindBy(linkText="Save")
+	WebElement saveButton;
+	
+	@FindBy(linkText="Cancel")
+	WebElement cancelButton;
+	
+
 // METHODS ON OBJECTS
 	
 	public void selectPoliteReturn(int index) {
-		new Select(driver.findElement(this.politeReturn)).selectByIndex(index);
+		new Select(this.politeReturn).selectByIndex(index);
 	}
 	
 	public void selectPoliteReturn(String politeReturn){
-		new Select(driver.findElement(this.politeReturn)).selectByValue(politeReturn);
+		new Select(this.politeReturn).selectByValue(politeReturn);
 	}
 	
 	public void textFirstName(String first_name) {
-		driver.findElement(this.firstName).sendKeys(first_name);
+		this.firstName.sendKeys(first_name);
 	}
 	
 	public String getTextedFirstName() {
-		return driver.findElement(this.firstName).getText();
+		return this.firstName.getText();
 	}
 	
 	public void clearFirstName() {
-		driver.findElement(this.firstName).clear();
+		this.firstName.clear();
 	}
 	
 	public void textLastName(String last_name) {
-		driver.findElement(this.lastName).sendKeys(last_name);
+		this.lastName.sendKeys(last_name);
 	}
 	
 	public String getTextedLastName() {
-		return driver.findElement(this.lastName).getText();
+		return this.lastName.getText();
 	}
 	
 	public void clearLastName() {
-		driver.findElement(this.lastName).clear();
+		this.lastName.clear();
 	}
 
 	public void selectStatus(int index) {
-		new Select(driver.findElement(this.status)).selectByIndex(index);
+		new Select(this.status).selectByIndex(index);
 	}
 	
 	public void selectStatus(String status) {
-		new Select(driver.findElement(this.status)).selectByVisibleText(status);
+		new Select(this.status).selectByVisibleText(status);
 	}
 	
 	public void textJobTitle(String job_title) {
-		driver.findElement(this.jobTitle).sendKeys(job_title);
+		this.jobTitle.sendKeys(job_title);
 	}
 	
 	public void clearJobTitle() {
-		driver.findElement(this.jobTitle).clear();
+		this.jobTitle.clear();
 	}
 	
 	public void textAccount(String acc) {
-		driver.findElement(this.account).sendKeys(acc);
+		this.account.sendKeys(acc);
 	}
 	
 	public void clearAccount() {
-		driver.findElement(this.account).clear();
+		this.account.clear();
 	}
 	
 	public void selectAccountSearch() {
-		driver.findElement(this.accountSearch).click();
+		this.accountSearch.click();
 	}
 	
 	public void textDepartment(String dep) {
-		driver.findElement(this.department).sendKeys(dep);
+		this.department.sendKeys(dep);
 	}
 	
 	public void clearDepartment() {
-		driver.findElement(this.department).clear();
+		this.department.clear();
 	}
 	
 	public void textOfficePhone(String officePh) {
-		driver.findElement(this.officePhone).sendKeys(officePh);
+		this.officePhone.sendKeys(officePh);
 	}
 	
 	public void clearOfficePhone() {
-		driver.findElement(this.officePhone).clear();
+		this.officePhone.clear();
 	}
 	
 	public void selectSource(int index) {
-		new Select(driver.findElement(this.source)).selectByIndex(index);
+		new Select(this.source).selectByIndex(index);
 	}
 	
 	public void selectSource(String source) {
-		new Select(driver.findElement(this.source)).selectByValue(source);
+		new Select(this.source).selectByValue(source);
 	}
 	
 	public void textMobilePhone(String mobilePh) {
-		driver.findElement(this.mobilePhone).sendKeys(mobilePh);
+		this.mobilePhone.sendKeys(mobilePh);
 	}
 	
 	public void clearMobilePhone() {
-		driver.findElement(this.mobilePhone).clear();
+		this.mobilePhone.clear();
 	}
 	
 	public void textOfficeFax(String fax) {
-		driver.findElement(this.officeFax).sendKeys(fax);
+		this.officeFax.sendKeys(fax);
 	}
 	
 	public void clearOfficeFax() {
-		driver.findElement(this.officeFax).clear();
+		this.officeFax.clear();
 	}
 	
 	public void textPrimaryEmail(String primEmail) {
-		driver.findElement(this.primaryEmail).sendKeys(primEmail);
+		this.primaryEmail.sendKeys(primEmail);
 	}
 	
 	public void clearPrimaryEmail() {
-		driver.findElement(this.primaryEmail).clear();
+		this.primaryEmail.clear();
 	}
 	
 	public void tickPrimaryEmailCheckbox() {
-		driver.findElement(this.primaryEmailCheckbox).click();
+		this.primaryEmailCheckbox.click();
 	}
 	
 	public void textSecondaryEmail(String seconEmail) {
-		driver.findElement(this.secondaryEmail).sendKeys(seconEmail);
+		this.secondaryEmail.sendKeys(seconEmail);
 	}
 	
 	public void clearSecondaryEmail() {
-		driver.findElement(this.secondaryEmail).clear();
+		this.secondaryEmail.clear();
 	}
 	
 	public void textPrimaryAddressStreet1(String street1) {
-		driver.findElement(this.primaryAddressStreet1).sendKeys(street1);
+		this.primaryAddressStreet1.sendKeys(street1);
 	}
 	
 	public void clearPrimaryAddressStreet1() {
-		driver.findElement(this.primaryAddressStreet1).clear();
+		this.primaryAddressStreet1.clear();
 	}
 	
 	public void textPrimaryAddressStreet2(String street2) {
-		driver.findElement(this.primaryAddressStreet2).sendKeys(street2);
+		this.primaryAddressStreet2.sendKeys(street2);
 	}
 	
 	public void clearPrimaryAddressStreet2() {
-		driver.findElement(this.primaryAddressStreet2).clear();
+		this.primaryAddressStreet2.clear();
 	}
 	
 	public void textPrimaryAddressCity(String city) {
-		driver.findElement(this.primaryAddressCity).sendKeys(city);
+		this.primaryAddressCity.sendKeys(city);
 	}
 	
 	public void clearPrimaryAddressCity() {
-		driver.findElement(this.primaryAddressCity).clear();
+		this.primaryAddressCity.clear();
 	}
 	
 	public void textPrimaryAddressState(String state) {
-		driver.findElement(this.primaryAddressState).sendKeys(state);
+		this.primaryAddressState.sendKeys(state);
 	}
 	
 	public void clearPrimaryAddressState() {
-		driver.findElement(this.primaryAddressState).clear();
+		this.primaryAddressState.clear();
 	}
 	
 	public void textPrimaryAddressPostalCode(String postalCode) {
-		driver.findElement(this.primaryAddressPostalCode).sendKeys(postalCode);
+		this.primaryAddressPostalCode.sendKeys(postalCode);
 	}
 	
 	public void clearPrimaryAddressPostalCode() {
-		driver.findElement(this.primaryAddressPostalCode).clear();
+		this.primaryAddressPostalCode.clear();
 	}
 	
 	public void textPrimaryAddressCountry(String country) {
-		driver.findElement(this.primaryAddressCountry).sendKeys(country);
+		this.primaryAddressCountry.sendKeys(country);
 	}
 	
 	public void clearPrimaryAddressCountry() {
-		driver.findElement(this.primaryAddressCountry).clear();
+		this.primaryAddressCountry.clear();
 	}
 	
 	public void textSecondaryAddressStreet1(String street1) {
-		driver.findElement(this.secondaryAddressStreet1).sendKeys(street1);
+		this.secondaryAddressStreet1.sendKeys(street1);
 	}
 	
 	public void clearSecondaryAddressStreet1() {
-		driver.findElement(this.secondaryAddressStreet1).clear();
+		this.secondaryAddressStreet1.clear();
 	}
 	
 	public void textSecondaryAddressStreet2(String street2) {
-		driver.findElement(this.secondaryAddressStreet2).sendKeys(street2);
+		this.secondaryAddressStreet2.sendKeys(street2);
 	}
 	
 	public void clearSecondaryAddressStreet2() {
-		driver.findElement(this.secondaryAddressStreet2).clear();
+		this.secondaryAddressStreet2.clear();
 	}
 	
 	public void textSecondaryAddressCity(String city) {
-		driver.findElement(this.secondaryAddressCity).sendKeys(city);
+		this.secondaryAddressCity.sendKeys(city);
 	}
 	
 	public void clearSecondaryAddressCity() {
-		driver.findElement(this.secondaryAddressCity).clear();
+		this.secondaryAddressCity.clear();
 	}
 	
 	public void textSecondaryAddressState(String state) {
-		driver.findElement(this.secondaryAddressState).sendKeys(state);
+		this.secondaryAddressState.sendKeys(state);
 	}
 	
 	public void clearSecondaryAddressState() {
-		driver.findElement(this.secondaryAddressState).clear();
+		this.secondaryAddressState.clear();
 	}
 	
 	public void textSecondaryAddressPostalCode(String postalCode) {
-		driver.findElement(this.secondaryAddressPostalCode).sendKeys(postalCode);
+		this.secondaryAddressPostalCode.sendKeys(postalCode);
 	}
 	
 	public void clearSecondaryAddressPostalCode() {
-		driver.findElement(this.secondaryAddressPostalCode).clear();
+		this.secondaryAddressPostalCode.clear();
 	}
 	
 	public void textSecondaryAddressCountry(String country) {
-		driver.findElement(this.secondaryAddressCountry).sendKeys(country);
+		this.secondaryAddressCountry.sendKeys(country);
 	}
 	
 	public void clearSecondaryAddressCountry() {
-		driver.findElement(this.secondaryAddressCountry).clear();
+		this.secondaryAddressCountry.clear();
 	}
 	
 	public void textDescription(String desc) {
-		driver.findElement(this.description).sendKeys(desc);
+		this.description.sendKeys(desc);
 	}
 	
 	public void clearDescription() {
-		driver.findElement(this.description).clear();
+		this.description.clear();
 	}
 	
 	public void clickSaveButton() {
-		driver.findElement(this.saveButton).click();
+		this.saveButton.click();
 	}
 	
 	public void clickCancelButton() {
-		driver.findElement(this.cancelButton).click();
+		this.cancelButton.click();
 	}	
 }

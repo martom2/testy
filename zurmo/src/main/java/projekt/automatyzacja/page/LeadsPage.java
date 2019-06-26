@@ -1,8 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LeadsPage {
 
@@ -10,51 +11,58 @@ public class LeadsPage {
 	
 	public LeadsPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
-	By searchBar = By.id("LeadsSearchForm_anyMixedAttributes");
+	@FindBy(id="LeadsSearchForm_anyMixedAttributes")
+	WebElement searchBar;
 	
-	By numberOfSearchResults = By.id("list-view-summary-clone");
+	@FindBy(id="list-view-summary-clone")
+	WebElement numberOfSearchResults;
 	
-	By firstTableCheckbox = By.cssSelector("tr.odd:nth-child(1) > td:nth-child(1) > label:nth-child(1)");
+	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(1) > label:nth-child(1)")
+	WebElement firstTableCheckbox;
 	
-	By tableFirsyNamePosition = By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)");
+	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)")
+	WebElement tableFirsyNamePosition;
 	
-	By alertMessage = By.cssSelector(".jnotify-item > span:nth-child(3)");
+	@FindBy(css=".jnotify-item > span:nth-child(3)")
+	WebElement alertMessage;
 	
 //METHODS ON OBJECTS
-	public void textSearchBar(String searchText) {
-		driver.findElement(this.searchBar).sendKeys(searchText);
+	
+    public void textSearchBar(String searchText) {
+		this.searchBar.sendKeys(searchText);
 	}
 	
 	public void clickSearchBar(){
-		driver.findElement(this.searchBar).click();
+		this.searchBar.click();
 	}
 	
 	public void selectFirstTableCheckbox() {
-		driver.findElement(this.firstTableCheckbox).click();
+		this.firstTableCheckbox.click();
 	}
 	
 	public String readTableFirstNamePosition() {
-		return driver.findElement(this.tableFirsyNamePosition).getText();
+		return this.tableFirsyNamePosition.getText();
 	}
 	
 	public WebElement returnTableFirstNamePositionElement() {
-		return driver.findElement(this.tableFirsyNamePosition);
+		return this.tableFirsyNamePosition;
 	}
 	
 	public void clickTableFirstNamePosition() {
-		driver.findElement(this.tableFirsyNamePosition).click();
+		this.tableFirsyNamePosition.click();
 	}
 	
 	public String readNumberOfSearchResults() {
-		return driver.findElement(this.numberOfSearchResults).getText();
+		return this.numberOfSearchResults.getText();
 	}
 	
 	public String readAlertMessage() {
-		return driver.findElement(this.alertMessage).getText();
+		return this.alertMessage.getText();
 	}
 	
 }

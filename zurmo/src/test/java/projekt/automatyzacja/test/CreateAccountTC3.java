@@ -35,58 +35,36 @@ import org.testng.annotations.AfterClass;
 
 public class CreateAccountTC3 {
 
-	WebDriver driver;
-	static ExcelUtil excel;
-	Menu menu;
-	SpecificMenu specificMenu;
-	AccountsPage accountsPage;
-	CreateAccountPage createAccountPage;
-	AccountDetailsPage accountDetailsPage;
+	private WebDriver driver;
+	private static ExcelUtil excel;
+	private Menu menu;
+	private SpecificMenu specificMenu;
+	private AccountsPage accountsPage;
+	private CreateAccountPage createAccountPage;
+	private AccountDetailsPage accountDetailsPage;
 	
-    String name;
-    String officePhone;
-    String industry;
-    String officeFax;
-    String employees;
-    String annualRevenue;
-    String type;
-    String website;
-    String billingAddressStreet1;
-    String billingAddressStreet2;
-    String billingAddressCity;
-    String billingAddressState;
-    String billingAddressPostalCode;
-    String billingAddressCountry;
-    String shippingAddressStreet1;
-    String shippingAddressStreet2;
-    String shippingAddressCity;
-    String shippingAddressState;
-    String shippingAddressPostalCode;
-    String shippingAddressCountry;
-    String description;    
-    
-    
-//    String name = "Kamil Czaja";
-//    String officePhone = "+48 29 458 74 23";
-//    String industry = "Banking";
-//    String officeFax = "+48 256 15 72";
-//    String employees = "5";
-//    String annualRevenue = "100";
-//    String type = "Vendor";
-//    String website = "http://www.kamil-czaja.org";
-//    String billingAddressStreet1 = "ul. Zielna";
-//    String billingAddressStreet2 = "18/2";
-//    String billingAddressCity = "Warszawa";
-//    String billingAddressState = "Mazowieckie";
-//    String billingAddressPostalCode = "10-158";
-//    String billingAddressCountry = "Polska";
-//    String shippingAddressStreet1 = "ul. Skrzydlata";
-//    String shippingAddressStreet2 = "2A/5";
-//    String shippingAddressCity = "Wrocław";
-//    String shippingAddressState = "Dolnośląskie";
-//    String shippingAddressPostalCode = "51-745";
-//    String shippingAddressCountry = "Polska";
-//    String description = "konto Kamila"; 
+    private String name;
+    private String officePhone;
+    private String industry;
+    private String officeFax;
+    private String employees;
+    private String annualRevenue;
+    private String type;
+    private String website;
+    private String billingAddressStreet1;
+    private String billingAddressStreet2;
+    private String billingAddressCity;
+    private String billingAddressState;
+    private String billingAddressPostalCode;
+    private String billingAddressCountry;
+    private String shippingAddressStreet1;
+    private String shippingAddressStreet2;
+    private String shippingAddressCity;
+    private String shippingAddressState;
+    private String shippingAddressPostalCode;
+    private String shippingAddressCountry;
+    private String description;    
+
     
     @Factory(dataProvider = "getData")
     public CreateAccountTC3(	String name,
@@ -239,7 +217,7 @@ public class CreateAccountTC3 {
   
   @AfterClass
   public void afterSuite() {
-	 // driver.quit();
+	  driver.quit();
   }
 
   @DataProvider
@@ -250,7 +228,7 @@ public class CreateAccountTC3 {
       int rowsNumber = excel.getNumberOfRows();
       int cellsNumber = excel.getNumberOfCellsInARow(0);
       
-	  System.out.println("ROWS ROWS ROWS "+rowsNumber);
+	  System.out.println("ROWS "+rowsNumber);
       
 	  List<List<String>> excelData = new ArrayList<List<String>>();
 	  

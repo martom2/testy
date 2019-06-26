@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="89747" started-at="2019-05-16T07:24:01Z" finished-at="2019-05-16T07:25:31Z">
+  <suite name="Default suite" duration-ms="96747" started-at="2019-06-26T09:14:29Z" finished-at="2019-06-26T09:16:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="89747" started-at="2019-05-16T07:24:01Z" finished-at="2019-05-16T07:25:31Z">
-      <class name="projekt.automatyzacja.test.CreateAccountTC3">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="setUp" is-config="true" duration-ms="40219" started-at="2019-05-16T07:24:01Z" finished-at="2019-05-16T07:24:41Z">
+    <test name="Default test" duration-ms="96747" started-at="2019-06-26T09:14:29Z" finished-at="2019-06-26T09:16:06Z">
+      <class name="projekt.automatyzacja.test.CreateLeadTC2">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:projekt.automatyzacja.test.CreateLeadTC2@55740540]" name="setUp" is-config="true" duration-ms="50524" started-at="2019-06-26T09:14:29Z" finished-at="2019-06-26T09:15:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createAccount()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="createAccount" duration-ms="49025" started-at="2019-05-16T07:24:41Z" finished-at="2019-05-16T07:25:31Z">
+        <test-method status="PASS" signature="createLead()[pri:0, instance:projekt.automatyzacja.test.CreateLeadTC2@55740540]" name="createLead" duration-ms="24979" started-at="2019-06-26T09:15:19Z" finished-at="2019-06-26T09:15:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAccount -->
-        <test-method status="PASS" signature="verifyCreatedAccount()[pri:1, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="verifyCreatedAccount" duration-ms="464" started-at="2019-05-16T07:25:31Z" depends-on-methods="projekt.automatyzacja.test.CreateAccountTC3.createAccount" finished-at="2019-05-16T07:25:31Z">
+        </test-method> <!-- createLead -->
+        <test-method status="PASS" signature="verifyCreatedLead()[pri:1, instance:projekt.automatyzacja.test.CreateLeadTC2@55740540]" name="verifyCreatedLead" duration-ms="18905" started-at="2019-06-26T09:15:44Z" depends-on-methods="projekt.automatyzacja.test.CreateLeadTC2.createLead" finished-at="2019-06-26T09:16:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreatedAccount -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateAccountTC3@36b4fe2a]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-05-16T07:25:31Z" finished-at="2019-05-16T07:25:31Z">
+        </test-method> <!-- verifyCreatedLead -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:projekt.automatyzacja.test.CreateLeadTC2@55740540]" name="afterSuite" is-config="true" duration-ms="2312" started-at="2019-06-26T09:16:03Z" finished-at="2019-06-26T09:16:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- projekt.automatyzacja.test.CreateAccountTC3 -->
+      </class> <!-- projekt.automatyzacja.test.CreateLeadTC2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class AccountDetailsPage {
 
@@ -9,75 +11,87 @@ public class AccountDetailsPage {
 	
 	public AccountDetailsPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
-	By switchViewButton = By.id("sliding-panel-toggle");
+	@FindBy(id="sliding-panel-toggle")
+	WebElement switchViewButton;
 	
-	By name = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)");
+    @FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)")
+	WebElement name;
 	
-	By officePhone = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)")
+	WebElement officePhone;
 	
-	By industry = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)")
+	WebElement industry;
 	
-	By officeFax = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)")
+	WebElement officeFax;
 	
-	By employees = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)")
+	WebElement employees;
 	
-	By annualRevenue = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)")
+	WebElement annualRevenue;
 	
-	By type = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)")
+	WebElement type;
 	
-	By website = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)")
+	WebElement website;
 	
-	By billingAddressAll = By.id("Account_billingAddress_MapLink");
+	@FindBy(id="Account_billingAddress_MapLink")
+	WebElement billingAddressAll;
 	
-	By shippingAddressAll = By.id("Account_shippingAddress_MapLink");
+	@FindBy(id="Account_shippingAddress_MapLink")
+	WebElement shippingAddressAll;
 	
-	By description = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(2)");
-	
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(2)")
+	WebElement description;
 	
 // METHODS ON LOCATED OBJECTS
 
-	public void clickSwitchViewButton() {
-		driver.findElement(switchViewButton);
+    public void clickSwitchViewButton() {
+		this.switchViewButton.click();
 	}
 	
 	public String readName(){
-		return driver.findElement(name).getText();
+		return this.name.getText();
 	}
 	
 	public String readOfficePhone() {
-		return driver.findElement(officePhone).getText();
+		return this.officePhone.getText();
 	}
 	
 	public String readIndustry() {
-		return driver.findElement(industry).getText();
+		return this.industry.getText();
 	}
 	
 	public String readOfficeFax() {
-		return driver.findElement(officeFax).getText();
+		return this.officeFax.getText();
 	}
 	
 	public String readEmployees() {
-		return driver.findElement(employees).getText();
+		return this.employees.getText();
 	}
 	
 	public String readAnnualRevenue() {
-		return driver.findElement(annualRevenue).getText();
+		return this.annualRevenue.getText();
 	}
 	
 	public String readType() {
-		return driver.findElement(type).getText();
+		return this.type.getText();
 	}
 	
 	public String readWebsite() {
-		return driver.findElement(website).getText();
+		return this.website.getText();
 	}
 	
 	public String readBillingAddressAll() {
-		return driver.findElement(billingAddressAll).getText();
+		return this.billingAddressAll.getText();
 	}
 	
 	public String readBillingAddressStreet1() {
@@ -120,7 +134,7 @@ public class AccountDetailsPage {
 	}
 	
 	public String readShippingAddressAll() {
-		return driver.findElement(shippingAddressAll).getText();
+		return this.shippingAddressAll.getText();
 	}
 	
 	public String readShippingAddressStreet1() {
@@ -163,7 +177,7 @@ public class AccountDetailsPage {
 	}
 	
 	public String readDescription() {
-		return driver.findElement(description).getText();
+		return this.description.getText();
 	}
 	
 }

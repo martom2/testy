@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class EditUserPage {
@@ -10,21 +12,24 @@ public class EditUserPage {
 	
 	public EditUserPage(WebDriver driver){
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
-	By status = By.id("User_userStatus");
+	@FindBy(id="User_userStatus")
+	WebElement status;
 	
-	By saveButton = By.linkText("Save");
+	@FindBy(linkText="Save")
+	WebElement saveButton;
 	
 // METHODS ON OBJECTS
 	
 	public void selectStatus(String status){
-		new Select(driver.findElement(this.status)).selectByVisibleText(status);
+		new Select(this.status).selectByVisibleText(status);
 	}
 	
 	public void clickSaveButton(){
-		driver.findElement(this.saveButton).click();
+		this.saveButton.click();
 	}
 }

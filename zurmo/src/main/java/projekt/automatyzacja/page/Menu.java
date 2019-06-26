@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class Menu {
 
@@ -9,77 +11,89 @@ public class Menu {
 	
 	public Menu(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
-	By homeButton = By.linkText("Home");
+	@FindBy(linkText="Home")
+	WebElement homeButton;
 	
-	By inboxButton = By.partialLinkText("Inbox");
+	@FindBy(partialLinkText="Inbox")
+	WebElement inboxButton;
 	
-	By accountsButton = By.linkText("Accounts");
+	@FindBy(linkText="Accounts")
+	WebElement accountsButton;
 	
-	By leadsButton = By.linkText("Leads");
+	@FindBy(linkText="Leads")
+	WebElement leadsButton;
 	
-	By contactsButton = By.linkText("Contacts");
+	@FindBy(linkText="Contacts")
+	WebElement contactsButton;
 	
-	By opportunitiesButton = By.linkText("Opportunities");
+	@FindBy(linkText="Opportunities")
+	WebElement opportunitiesButton;
 	
-	By dotsButton = By.className("toggle-hidden-nav-items");
+	@FindBy(className="toggle-hidden-nav-items")
+	WebElement dotsButton;
 	
-	By marketingButton = By.linkText("Marketing");
+	@FindBy(linkText="Marketing")
+	WebElement marketingButton;
 	
-	By projectsButton = By.linkText("Projects");
+	@FindBy(linkText="Projects")
+	WebElement projectsButton;
 	
-	By productsButton = By.linkText("Products");
+	@FindBy(linkText="Products")
+	WebElement productsButton;
 	
-	By reportsButton = By.linkText("Reports");
+	@FindBy(linkText="Reports")
+	WebElement reportsButton;
 	
 	
 //METHODS ON OBJECTS
 	
 	public void homeButtonClick() {
-		driver.findElement(homeButton).click();
+		this.homeButton.click();
 	}
 	
 	public void inboxButtonClick() {
-		driver.findElement(inboxButton).click();
+		this.inboxButton.click();
 	}
 	
 	public void accountsButtonClick() {
-		driver.findElement(accountsButton).click();
+		this.accountsButton.click();
 	}
 	
 	public void leadsButtonClick() {
-		driver.findElement(leadsButton).click();
+		this.leadsButton.click();
 	}
 	
 	public void contactsButtonClick() {
-		driver.findElement(contactsButton).click();
+		this.contactsButton.click();
 	}
 	
 	public void opportunitiesButtonClick() {
-		driver.findElement(opportunitiesButton).click();
+		this.opportunitiesButton.click();
 	}
 	
 	public void dotsButtonClick() {
-		driver.findElement(dotsButton).click();
+		this.dotsButton.click();
 	}
 	
 	public void marketingButtonClick() {
-		driver.findElement(marketingButton).click();
+		this.marketingButton.click();
 	}
 	
 	public void projectsButtonClick() {
-		driver.findElement(projectsButton).click();
+		this.projectsButton.click();
 	}
 	
 	public void productsButtonClick() {
-		driver.findElement(productsButton).click();
+		this.productsButton.click();
 	}
 	
 	public void reportsButtonClick() {
-		driver.findElement(reportsButton).click();
+		this.reportsButton.click();
 	}
 
 }

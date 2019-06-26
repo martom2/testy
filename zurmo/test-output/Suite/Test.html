@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/5/2</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 08 12:40:11 CET 2019</td>
+<td>Started on:</td><td>Wed Jun 26 10:34:41 CEST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>171 seconds (171435 ms)</td>
+<tr><td>Total time:</td><td>1343 seconds (1343639 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,24 +75,51 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Dr.
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<td title='projekt.automatyzacja.test.CreateLeadTC2.createLead()'><b>createLead</b><br>Test class: projekt.automatyzacja.test.CreateLeadTC2</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;a href=&quot;/zurmo/app/index.php/leads/default&quot;&gt; is not clickable at point (85,178.8000030517578) because another element &lt;div class=&quot;ui-widget-overlay ui-front&quot;&gt; obscures it
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
-	at projekt.automatyzacja.page.CreateContactPage.selectStatus(CreateContactPage.java:113)
-	at projekt.automatyzacja.test.CreateContactTC5.createContact(CreateContactTC5.java:167)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace653345773", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace653345773'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Dr.
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.43.250&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 15764, moz:profile: C:\Users\Admin\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: d06ef20d-46bb-4e22-8584-5768172156a1
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at projekt.automatyzacja.page.Menu.leadsButtonClick(Menu.java:68)
+	at projekt.automatyzacja.test.CreateLeadTC2.createLead(CreateLeadTC2.java:164)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace817092761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace817092761'><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;a href=&quot;/zurmo/app/index.php/leads/default&quot;&gt; is not clickable at point (85,178.8000030517578) because another element &lt;div class=&quot;ui-widget-overlay ui-front&quot;&gt; obscures it
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
-	at projekt.automatyzacja.page.CreateContactPage.selectStatus(CreateContactPage.java:113)
-	at projekt.automatyzacja.test.CreateContactTC5.createContact(CreateContactTC5.java:167)
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.43.250&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 15764, moz:profile: C:\Users\Admin\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: d06ef20d-46bb-4e22-8584-5768172156a1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at projekt.automatyzacja.page.Menu.leadsButtonClick(Menu.java:68)
+	at projekt.automatyzacja.test.CreateLeadTC2.createLead(CreateLeadTC2.java:164)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,8 +146,204 @@ Driver info: driver.version: unknown
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>18</td>
-<td>projekt.automatyzacja.test.CreateContactTC5@7748410a</td></tr>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateLeadTC2@5ace1ed4</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.DeleteLeadTC.deleteLead()'><b>deleteLead</b><br>Test class: projekt.automatyzacja.test.DeleteLeadTC</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;Weronika Rosztyn&apos;) to be present in element found by By.cssSelector: tr.odd:nth-child(1) &gt; td:nth-child(3) &gt; a:nth-child(1) (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.43.250&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 28908, moz:profile: C:\Users\Admin\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 64026d58-ab8c-4abe-bb07-343b7d1bc748
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at projekt.automatyzacja.test.DeleteLeadTC.deleteLead(DeleteLeadTC.java:97)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace920033195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace920033195'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;Weronika Rosztyn&apos;) to be present in element found by By.cssSelector: tr.odd:nth-child(1) &gt; td:nth-child(3) &gt; a:nth-child(1) (tried for 60 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.43.250&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 28908, moz:profile: C:\Users\Admin\AppData\Loca..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 10.0, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 64026d58-ab8c-4abe-bb07-343b7d1bc748
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at projekt.automatyzacja.test.DeleteLeadTC.deleteLead(DeleteLeadTC.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>67</td>
+<td>projekt.automatyzacja.test.DeleteLeadTC@1613674b</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateCatalogItemTC2.verifyCreatedCatalogItem()'><b>verifyCreatedCatalogItem</b><br>Test class: projekt.automatyzacja.test.CreateCatalogItemTC2</td>
+<td><div><pre>java.lang.AssertionError: expected [Active] but found [Inactive]
+	at projekt.automatyzacja.test.CreateCatalogItemTC2.verifyCreatedCatalogItem(CreateCatalogItemTC2.java:164)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1915257984", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1915257984'><pre>java.lang.AssertionError: expected [Active] but found [Inactive]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at projekt.automatyzacja.test.CreateCatalogItemTC2.verifyCreatedCatalogItem(CreateCatalogItemTC2.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateCatalogItemTC2@6631f5ca</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateOpportunityTC2.verifyCreatedOpportunity()'><b>verifyCreatedOpportunity</b><br>Test class: projekt.automatyzacja.test.CreateOpportunityTC2</td>
+<td><div><pre>java.lang.AssertionError: expected [12/3/18] but found [6/26/19]
+	at projekt.automatyzacja.test.CreateOpportunityTC2.verifyCreatedOpportunity(CreateOpportunityTC2.java:139)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace517287748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace517287748'><pre>java.lang.AssertionError: expected [12/3/18] but found [6/26/19]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at projekt.automatyzacja.test.CreateOpportunityTC2.verifyCreatedOpportunity(CreateOpportunityTC2.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateOpportunityTC2@27ff5d15</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.DeactivateUserTC.verifyDeactivationOfUser()'><b>verifyDeactivationOfUser</b><br>Test class: projekt.automatyzacja.test.DeactivateUserTC</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;Incorrect username or password.&apos;) to be present in element found by By.id: LoginForm_password_em_ (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at projekt.automatyzacja.test.DeactivateUserTC.verifyDeactivationOfUser(DeactivateUserTC.java:121)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: LoginForm_password_em_
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.43.250&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:394)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	... 26 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1653997783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1653997783'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;Incorrect username or password.&apos;) to be present in element found by By.id: LoginForm_password_em_ (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:113)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:283)
+	at projekt.automatyzacja.test.DeactivateUserTC.verifyDeactivationOfUser(DeactivateUserTC.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: LoginForm_password_em_
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;DESKTOP-EPR1DQN&apos;, ip: &apos;192.168.43.250&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:398)
+	at org.openqa.selenium.support.ui.ExpectedConditions$13.apply(ExpectedConditions.java:394)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	... 26 more
+</pre></div></td>
+<td>35</td>
+<td>projekt.automatyzacja.test.DeactivateUserTC@649bec2e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -130,25 +353,110 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td title='projekt.automatyzacja.test.ActivateUserTC.activateUser()'><b>activateUser</b><br>Test class: projekt.automatyzacja.test.ActivateUserTC</td>
 <td></td>
-<td>16</td>
-<td>projekt.automatyzacja.test.CreateContactTC5@4470f8a6</td></tr>
+<td>45</td>
+<td>projekt.automatyzacja.test.ActivateUserTC@693fe6c9</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.AddPostTC.addPost()'><b>addPost</b><br>Test class: projekt.automatyzacja.test.AddPostTC</td>
+<td></td>
+<td>11</td>
+<td>projekt.automatyzacja.test.AddPostTC@34f5090e</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateAccountTC3.createAccount()'><b>createAccount</b><br>Test class: projekt.automatyzacja.test.CreateAccountTC3</td>
+<td></td>
+<td>23</td>
+<td>projekt.automatyzacja.test.CreateAccountTC3@b62d79</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateCatalogItemTC2.createCatalogItem()'><b>createCatalogItem</b><br>Test class: projekt.automatyzacja.test.CreateCatalogItemTC2</td>
+<td></td>
+<td>54</td>
+<td>projekt.automatyzacja.test.CreateCatalogItemTC2@6631f5ca</td></tr>
 <tr>
 <td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
 <td></td>
-<td>19</td>
-<td>projekt.automatyzacja.test.CreateContactTC5@7c83dc97</td></tr>
+<td>53</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@1e6454ec</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>25</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@51dcb805</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>26</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@66498326</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.createContact()'><b>createContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>50</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@cad498c</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateOpportunityTC2.createOpportunity()'><b>createOpportunity</b><br>Test class: projekt.automatyzacja.test.CreateOpportunityTC2</td>
+<td></td>
+<td>20</td>
+<td>projekt.automatyzacja.test.CreateOpportunityTC2@27ff5d15</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.DeactivateUserTC.deactivateUser()'><b>deactivateUser</b><br>Test class: projekt.automatyzacja.test.DeactivateUserTC</td>
+<td></td>
+<td>38</td>
+<td>projekt.automatyzacja.test.DeactivateUserTC@649bec2e</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.EditContactTC2.editContact()'><b>editContact</b><br>Test class: projekt.automatyzacja.test.EditContactTC2</td>
+<td></td>
+<td>43</td>
+<td>projekt.automatyzacja.test.EditContactTC2@2accdbb5</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.ExportOpportunitiesTC.exportOpportunity()'><b>exportOpportunity</b><br>Test class: projekt.automatyzacja.test.ExportOpportunitiesTC</td>
+<td></td>
+<td>8</td>
+<td>projekt.automatyzacja.test.ExportOpportunitiesTC@4e096385</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.LoginTC.loginToZurmo()'><b>loginToZurmo</b><br>Test class: projekt.automatyzacja.test.LoginTC</td>
+<td></td>
+<td>21</td>
+<td>projekt.automatyzacja.test.LoginTC@c333c60</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.AddPostTC.verifyAddedPost()'><b>verifyAddedPost</b><br>Test class: projekt.automatyzacja.test.AddPostTC</td>
+<td></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.AddPostTC@34f5090e</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateAccountTC3.verifyCreatedAccount()'><b>verifyCreatedAccount</b><br>Test class: projekt.automatyzacja.test.CreateAccountTC3</td>
+<td></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateAccountTC3@b62d79</td></tr>
 <tr>
 <td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
 <td></td>
 <td>0</td>
-<td>projekt.automatyzacja.test.CreateContactTC5@4470f8a6</td></tr>
+<td>projekt.automatyzacja.test.CreateContactTC5@cad498c</td></tr>
 <tr>
 <td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
 <td></td>
-<td>13</td>
-<td>projekt.automatyzacja.test.CreateContactTC5@7c83dc97</td></tr>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@66498326</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@51dcb805</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
+<td></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.CreateContactTC5@1e6454ec</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.EditContactTC2.verifyEditedContact()'><b>verifyEditedContact</b><br>Test class: projekt.automatyzacja.test.EditContactTC2</td>
+<td></td>
+<td>0</td>
+<td>projekt.automatyzacja.test.EditContactTC2@2accdbb5</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.ActivateUserTC.verifyInactivationOfUser()'><b>verifyInactivationOfUser</b><br>Test class: projekt.automatyzacja.test.ActivateUserTC</td>
+<td></td>
+<td>17</td>
+<td>projekt.automatyzacja.test.ActivateUserTC@693fe6c9</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -158,10 +466,36 @@ Driver info: driver.version: unknown
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='projekt.automatyzacja.test.CreateContactTC5.verifyCreatedContact()'><b>verifyCreatedContact</b><br>Test class: projekt.automatyzacja.test.CreateContactTC5</td>
-<td><div><pre>java.lang.Throwable: Method CreateContactTC5.verifyCreatedContact()[pri:1, instance:projekt.automatyzacja.test.CreateContactTC5@7748410a] depends on not successfully finished methods
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2122256138", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2122256138'><pre>java.lang.Throwable: Method CreateContactTC5.verifyCreatedContact()[pri:1, instance:projekt.automatyzacja.test.CreateContactTC5@7748410a] depends on not successfully finished methods
+<td title='projekt.automatyzacja.test.CreateLeadTC2.verifyCreatedLead()'><b>verifyCreatedLead</b><br>Test class: projekt.automatyzacja.test.CreateLeadTC2</td>
+<td><div><pre>java.lang.Throwable: Method CreateLeadTC2.verifyCreatedLead()[pri:1, instance:projekt.automatyzacja.test.CreateLeadTC2@5ace1ed4] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace786470345", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace786470345'><pre>java.lang.Throwable: Method CreateLeadTC2.verifyCreatedLead()[pri:1, instance:projekt.automatyzacja.test.CreateLeadTC2@5ace1ed4] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='projekt.automatyzacja.test.DeleteLeadTC.verifyDeletion()'><b>verifyDeletion</b><br>Test class: projekt.automatyzacja.test.DeleteLeadTC</td>
+<td><div><pre>java.lang.Throwable: Method DeleteLeadTC.verifyDeletion()[pri:1, instance:projekt.automatyzacja.test.DeleteLeadTC@1613674b] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace237988421", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace237988421'><pre>java.lang.Throwable: Method DeleteLeadTC.verifyDeletion()[pri:1, instance:projekt.automatyzacja.test.DeleteLeadTC@1613674b] depends on not successfully finished methods
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)

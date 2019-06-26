@@ -34,38 +34,38 @@ import org.testng.annotations.Factory;
 
 public class CreateContactTC5 {
 	
-	WebDriver driver;
-	static ExcelUtil excel;
-	Menu menu;
-	SpecificMenu specificMenu;
-	CreateContactPage createContactPage;
-	ContactDetailsPage contactDetailsPage;
+	private WebDriver driver;
+	private static ExcelUtil excel;
+	private Menu menu;
+	private SpecificMenu specificMenu;
+	private CreateContactPage createContactPage;
+	private ContactDetailsPage contactDetailsPage;
 	
-	String politeReturn;
-	String firstName;
-	String lastName;
-	String status;
-	String jobTitle;
-	String department;
-	String officePhone;
-	String source;
-	String mobilePhone;
-	String officeFax;
-	String primaryEmail;
-	String secondaryEmail;
-	String primaryAddressStreet1;
-	String primaryAddressStreet2;
-	String primaryAddressCity;
-	String primaryAddressState;
-	String primaryAddressPostalCode;
-	String primaryAddressCountry;
-	String secondaryAddressStreet1;
-	String secondaryAddressStreet2;
-	String secondaryAddressCity;
-	String secondaryAddressState;
-	String secondaryAddressPostalCode;
-	String secondaryAddressCountry;
-	String description;
+	private String politeReturn;
+	private String firstName;
+	private String lastName;
+	private String status;
+	private String jobTitle;
+	private String department;
+	private String officePhone;
+	private String source;
+	private String mobilePhone;
+	private String officeFax;
+	private String primaryEmail;
+	private String secondaryEmail;
+	private String primaryAddressStreet1;
+	private String primaryAddressStreet2;
+	private String primaryAddressCity;
+	private String primaryAddressState;
+	private String primaryAddressPostalCode;
+	private String primaryAddressCountry;
+	private String secondaryAddressStreet1;
+	private String secondaryAddressStreet2;
+	private String secondaryAddressCity;
+	private String secondaryAddressState;
+	private String secondaryAddressPostalCode;
+	private String secondaryAddressCountry;
+	private String description;
 	
 	
 	@Factory(dataProvider = "getData")
@@ -233,36 +233,8 @@ public class CreateContactTC5 {
   
   @AfterClass
   public void afterSuite() {
-	 // driver.quit();
+	  driver.quit();
   }
-  
-//  @DataProvider
-//  private static String[][] getData(ITestContext context) {
-//
-//	  excel = new ExcelUtil("createContact.xlsx", "Arkusz2"); 
-//	  
-//      int rowsNumber = excel.getNumberOfRows();
-//      int cellsNumber = excel.getNumberOfCellsInARow(0);
-//	  String[][] returnValues = new String[rowsNumber-1][cellsNumber];
-//	  System.out.println("ROWS ROWS ROWS "+rowsNumber);
-//      
-//      for(int i = 0; i < rowsNumber-1; i++) //Loop work for Rows
-//      {            
-//          for (int j = 0; j < cellsNumber; j++) //Loop work for colNum
-//          {
-//             String jCell = excel.getCellData(i+1, j); 
-//             
-//             if(jCell == "")
-//                 returnValues[i][j] = "Dr."; //if it get Null value it pass no data 
-//             else
-//                  {
-//                      returnValues[i][j] = jCell; //This formatter get my all values as string i.e integer, float all type data value
-//                  }
-//              }
-//          }
-//      
-//      return returnValues;   
-//  }
   
   
   @DataProvider
@@ -273,7 +245,7 @@ public class CreateContactTC5 {
       int rowsNumber = excel.getNumberOfRows();
       int cellsNumber = excel.getNumberOfCellsInARow(0);
       
-	  System.out.println("ROWS ROWS ROWS "+rowsNumber);
+	  System.out.println("ROWS "+rowsNumber);
       
 	  List<List<String>> excelData = new ArrayList<List<String>>();
 	  

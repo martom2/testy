@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LeadDetailsPage {
 
@@ -9,96 +11,114 @@ public class LeadDetailsPage {
 	
 	public LeadDetailsPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
+
+	@FindBy(id="sliding-panel-toggle")
+	WebElement switchViewButton;
 	
-	By switchViewButton = By.id("sliding-panel-toggle");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)")
+	WebElement name;
 	
-	By name = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)")
+	WebElement status;
 	
-	By status = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)")
+	WebElement jobTitle;
 	
-	By jobTitle = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)")
+	WebElement companyName;
 	
-	By companyName = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)")
+	WebElement department;
 	
-	By department = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)")
+	WebElement officePhone;
 	
-	By officePhone = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)")
+	WebElement source;
 	
-	By source = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)")
+	WebElement mobilePhone;
 	
-	By mobilePhone = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(9) > td:nth-child(2)")
+	WebElement officeFax;
 	
-	By officeFax = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(9) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(10) > td:nth-child(2) > a:nth-child(1)")
+	WebElement primaryEmail;
 	
-	By primaryEmail = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(10) > td:nth-child(2) > a:nth-child(1)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(2) > a:nth-child(1)")
+	WebElement secondaryEmail;
 	
-	By secondaryEmail = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(2) > a:nth-child(1)");
+	@FindBy(id="Contact_primaryAddress_MapLink")
+	WebElement primaryAddressAll;
 	
-	By primaryAddressAll = By.id("Contact_primaryAddress_MapLink");
+	@FindBy(css="#Contact_secondaryAddress_MapLink")
+	WebElement secondaryAddressAll;
 	
-	By secondaryAddressAll = By.cssSelector("#Contact_secondaryAddress_MapLink");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(14) > td:nth-child(2)")
+	WebElement industry;
 	
-	By industry = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(14) > td:nth-child(2)");
-			
-	By website = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(15) > td:nth-child(2) > a:nth-child(1)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(15) > td:nth-child(2) > a:nth-child(1)")
+	WebElement website;
 	
-	By description = By.cssSelector("#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(16) > td:nth-child(2)");
+	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(16) > td:nth-child(2)")
+	WebElement description;
 	
 //METHODS ON OBJECTS
 	
 	public void clickSwitchViewButton() {
-		driver.findElement(switchViewButton);
+		this.switchViewButton.click();
 	}
 	
 	public String readName(){
-		return driver.findElement(name).getText();
+		return this.name.getText();
 	}
 	
 	public String readStatus() {
-		return driver.findElement(status).getText();
+		return this.status.getText();
 	}
 	
 	public String readJobTitle() {
-		return driver.findElement(jobTitle).getText();
+		return this.jobTitle.getText();
 	}
 	
 	public String readAccount() {
-		return driver.findElement(companyName).getText();
+		return this.companyName.getText();
 	}
 	
 	public String readDepartment() {
-		return driver.findElement(department).getText();
+		return this.department.getText();
 	}
 	
 	public String readOfficePhone() {
-		return driver.findElement(officePhone).getText();
+		return this.officePhone.getText();
 	}
 	
 	public String readSource() {
-		return driver.findElement(source).getText();
+		return this.source.getText();
 	}
 	
 	public String readMobilePhone() {
-		return driver.findElement(mobilePhone).getText();
+		return this.mobilePhone.getText();
 	}
 	
 	public String readOfficeFax() {
-		return driver.findElement(officeFax).getText();
+		return this.officeFax.getText();
 	}
 	
 	public String readPrimaryEmail() {
-		return driver.findElement(primaryEmail).getText();
+		return this.primaryEmail.getText();
 	}
 	
 	public String readSecondaryEmail() {
-		return driver.findElement(secondaryEmail).getText();
+		return this.secondaryEmail.getText();
 	}
 	
 	public String readPrimaryAddressAll() {
-		return driver.findElement(primaryAddressAll).getText();
+		return this.primaryAddressAll.getText();
 	}
 	
 	public String readPrimaryAddressStreet1() {
@@ -140,7 +160,7 @@ public class LeadDetailsPage {
 	}
 	
 	public String readSecondaryAddressAll() {
-		return driver.findElement(secondaryAddressAll).getText();
+		return this.secondaryAddressAll.getText();
 	}
 	
 	public String readSecondaryAddressStreet1() {
@@ -182,15 +202,15 @@ public class LeadDetailsPage {
 	}
 	
 	public String readIndustry() {
-		return driver.findElement(industry).getText();
+		return this.industry.getText();
 	}
 	
 	public String readWebsite() {
-		return driver.findElement(website).getText();
+		return this.website.getText();
 	}
 	
 	public String readDescription() {
-		return driver.findElement(description).getText();
+		return this.description.getText();
 	}
 	
 }

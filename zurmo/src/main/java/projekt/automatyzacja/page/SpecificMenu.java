@@ -1,9 +1,10 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class SpecificMenu {
 	
@@ -11,41 +12,65 @@ public class SpecificMenu {
 	
 	public SpecificMenu(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
-	By createButton = By.cssSelector(".button-action");
+	@FindBy(css=".button-action")
+	WebElement createButton;
 	
-	By updateMenuButton = By.linkText("Update");
-	By updateSelectedSubButton = By.id("list-view-massActionSelected");
-	By updateAllSubButton = By.id("list-view-massActionAll");
+	@FindBy(linkText="Update")
+	WebElement updateMenuButton;
 	
-	By exportMenuButton = By.linkText("Export");
-	By exportSelectedSubButton = By.id("list-view-exportActionSelected");
-	By exportAllSubButton = By.id("list-view-exportActionAll");
+	@FindBy(id="list-view-massActionSelected")
+	WebElement updateSelectedSubButton;
 	
-	By deleteMenuButton = By.linkText("Delete");
-	By deleteSelectedSubButton = By.id("list-view-deleteMassActionSelected");
-	By deleteAllSubButton = By.id("list-view-deleteMassActionAll");
+	@FindBy(id="list-view-massActionAll")
+	WebElement updateAllSubButton;
 	
-	By subscribeMenuButton = By.linkText("Subscribe");
-	By subscribeSelectedSubButton = By.id("list-view-subscribeMassActionSelected");
-	By subscribeAllSubButton = By.id("list-view-subscribeMassActionAll");
+	@FindBy(linkText="Export")
+	WebElement exportMenuButton;
 	
-	By mergeMenuButton = By.linkText("Merge");
-	By mergeSelectedSubButton = By.id("list-view-listViewMergeSelected");
-
+	@FindBy(id="list-view-exportActionSelected")
+	WebElement exportSelectedSubButton;
+	
+	@FindBy(id="list-view-exportActionAll")
+	WebElement exportAllSubButton;
+	
+	@FindBy(linkText="Delete")
+	WebElement deleteMenuButton;
+	
+	@FindBy(id="list-view-deleteMassActionSelected")
+	WebElement deleteSelectedSubButton;
+	
+	@FindBy(id="list-view-deleteMassActionAll")
+	WebElement deleteAllSubButton;
+	
+	@FindBy(linkText="Subscribe")
+	WebElement subscribeMenuButton;
+	
+	@FindBy(id="list-view-subscribeMassActionSelected")
+	WebElement subscribeSelectedSubButton;
+	
+	@FindBy(id="list-view-subscribeMassActionAll")
+	WebElement subscribeAllSubButton;
+	
+	@FindBy(linkText="Merge")
+	WebElement mergeMenuButton;
+	
+	@FindBy(id="list-view-listViewMergeSelected")
+	WebElement mergeSelectedSubButton;
 	
 	
 // METHODS ON OBJECTS
 	
 	public void clickCreate() {
-		driver.findElement(createButton).click();
+		this.createButton.click();
 	}
 
 	public void clickUpdateSelected() {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", driver.findElement(this.updateSelectedSubButton));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", this.updateSelectedSubButton);
 	}
 	
 	public void clickUpdateAll() {
@@ -53,7 +78,7 @@ public class SpecificMenu {
 	}
 	
 	public void clickExportSelected() {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", driver.findElement(this.exportSelectedSubButton));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", this.exportSelectedSubButton);
 	}
 	
 	public void clickExportAll() {
@@ -61,7 +86,7 @@ public class SpecificMenu {
 	}
 	
 	public void clickDeleteSelected() {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", driver.findElement(this.deleteSelectedSubButton));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", this.deleteSelectedSubButton);
 	}
 	
 	public void clickDeleteAll() {

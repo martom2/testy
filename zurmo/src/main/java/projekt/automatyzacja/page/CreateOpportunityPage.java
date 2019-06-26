@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateOpportunityPage {
@@ -10,104 +12,121 @@ WebDriver driver;
 	
 	public CreateOpportunityPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 
-	By name = By.id("Opportunity_name");
+	@FindBy(id="Opportunity_name")
+	WebElement name;
 	
-	By amountCurrency = By.id("Opportunity_amount_currency_id");
-	By amountValue = By.id("Opportunity_amount_value");
+	@FindBy(id="Opportunity_amount_currency_id")
+	WebElement amountCurrency;
 	
-	By account = By.id("Opportunity_account_name");
-	By accountSearch = By.id("Opportunity_account_SelectLink");
+	@FindBy(id="Opportunity_amount_value")
+	WebElement amountValue;
 	
-	By closeDate = By.id("Opportunity_closeDate");
-	By closeDateCalendar = By.className("ui-datepicker-trigger");
+	@FindBy(id="Opportunity_account_name")
+	WebElement account;
 	
-	By stage = By.id("Opportunity_stage_value");
+	@FindBy(id="Opportunity_account_SelectLink")
+	WebElement accountSearch;
 	
-	By probability = By.id("Opportunity_probability");
+	@FindBy(id="Opportunity_closeDate")
+	WebElement closeDate;
 	
-	By source = By.id("Opportunity_source_value");
+	@FindBy(className="ui-datepicker-trigger")
+	WebElement closeDateCalendar;
 	
-	By description = By.id("Opportunity_description");
+	@FindBy(id="Opportunity_stage_value")
+	WebElement stage;
 	
-	By saveButton = By.linkText("Save");
+	@FindBy(id="Opportunity_probability")
+	WebElement probability;
 	
-	By cancelButton = By.linkText("Cancel");
+	@FindBy(id="Opportunity_source_value")
+	WebElement source;
+	
+	@FindBy(id="Opportunity_description")
+	WebElement description;
+	
+	@FindBy(linkText="Save")
+	WebElement saveButton;
+	
+	@FindBy(linkText="Cancel")
+	WebElement cancelButton;
 	
 	
 	
 //METHODS ON OBJECTS
 	
 	public void textName(String name) {
-		driver.findElement(this.name).sendKeys(name);
+		this.name.sendKeys(name);
 	}
 	
 	public void selectAmountCurrency(int index) {
-		new Select(driver.findElement(this.amountCurrency)).selectByIndex(index);
+		new Select(this.amountCurrency).selectByIndex(index);
 	}
 	
 	public void selectAmountCurrency(String currency) {
-		new Select(driver.findElement(this.amountCurrency)).selectByVisibleText(currency);
+		new Select(this.amountCurrency).selectByVisibleText(currency);
 	}
 	
 	public void textAmountValue(String amount) {
-		driver.findElement(this.amountValue).sendKeys(amount);
+		this.amountValue.sendKeys(amount);
 	}
 	
 	public void clearAmountValue() {
-		driver.findElement(this.amountValue).clear();
+		this.amountValue.clear();
 	}
 	
 	public void textAccount(String acc) {
-		driver.findElement(this.account).sendKeys(acc);
+		this.account.sendKeys(acc);
 	}
 	
 	public void selectAccountSearch() {
-		driver.findElement(this.accountSearch).click();
+		this.accountSearch.click();
 	}
 	
 	public void textCloseDate(String closeDate) {
-		driver.findElement(this.closeDate).sendKeys(closeDate);
+		this.closeDate.sendKeys(closeDate);
 	}
 	
 	public void selectCloseDateCalendar() {
-		driver.findElement(this.closeDateCalendar).click();
+		this.closeDateCalendar.click();
 	}
 	
 	
 	public void selectStage(int index) {
-		new Select(driver.findElement(this.stage)).selectByIndex(index);
+		new Select(this.stage).selectByIndex(index);
 	}
 	
 	public void selectStage(String stage) {
-		new Select(driver.findElement(this.stage)).selectByVisibleText(stage);
+		new Select(this.stage).selectByVisibleText(stage);
 	}
 	
 	public void textProbability(String probability) {
-		driver.findElement(this.probability).sendKeys(probability);
+		this.probability.sendKeys(probability);
 	}
 	
 	public void selectSource(int index) {
-		new Select(driver.findElement(source)).selectByIndex(index);
+		new Select(source).selectByIndex(index);
 	}
 	
 	public void selectSource(String source) {
-		new Select(driver.findElement(this.source)).selectByVisibleText(source);;
+		new Select(this.source).selectByVisibleText(source);;
 	}
 	
 	public void textDescription(String desc) {
-		driver.findElement(description).sendKeys(desc);
+		description.sendKeys(desc);
 	}
 	
 	public void clickSaveButton() {
-		driver.findElement(saveButton).click();
+		saveButton.click();
 	}
 	
 	public void clickCancelButton() {
-		driver.findElement(cancelButton).click();
+		cancelButton.click();
 	}
 	
 }

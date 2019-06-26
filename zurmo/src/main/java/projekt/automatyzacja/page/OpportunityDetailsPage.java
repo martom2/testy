@@ -1,7 +1,9 @@
 package projekt.automatyzacja.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class OpportunityDetailsPage {
 
@@ -9,58 +11,68 @@ WebDriver driver;
 	
 	public OpportunityDetailsPage(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
-	By name = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)")
+	WebElement name;
 	
-	By amount = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)")
+	WebElement amount;
 	
-	By account = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)")
+	WebElement account;
 	
-	By closeDate = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)")
+	WebElement closeDate;
 	
-	By stage = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)")
+	WebElement stage;
 	
-	By probability = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)")
+	WebElement probability;
 	
-	By source = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)")
+	WebElement source;
 	
-	By description = By.cssSelector("div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)");
+	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)")
+	WebElement description;
+	
 	
 //METHODS ON OBJECTS
 	
-	public String readName(){
-		return driver.findElement(this.name).getText();
+    public String readName(){
+		return this.name.getText();
 	}
 	
 	public String readAmount() {
-		return driver.findElement(this.amount).getText();
+		return this.amount.getText();
 	}
 	
 	public String readAccount() {
-		return driver.findElement(this.account).getText();
+		return this.account.getText();
 	}
 	
 	public String readCloseDate() {
-		return driver.findElement(this.closeDate).getText();
+		return this.closeDate.getText();
 	}
 	
 	public String readStage() {
-		return driver.findElement(this.stage).getText();
+		return this.stage.getText();
 	}
 	
 	public String readProbability() {
-		return driver.findElement(this.probability).getText();
+		return this.probability.getText();
 	}
 	
 	public String readSource() {
-		return driver.findElement(this.source).getText();
+		return this.source.getText();
 	}
 	
 	public String readDescription() {
-		return driver.findElement(this.description).getText();
+		return this.description.getText();
 	}
 	
 }

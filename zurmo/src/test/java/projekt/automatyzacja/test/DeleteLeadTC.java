@@ -1,5 +1,8 @@
 package projekt.automatyzacja.test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -11,8 +14,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
 import projekt.automatyzacja.page.CreateLeadPage;
@@ -22,18 +28,31 @@ import projekt.automatyzacja.page.MassDeleteLeadsPage;
 import projekt.automatyzacja.page.Menu;
 import projekt.automatyzacja.page.SpecificMenu;
 import projekt.automatyzacja.testcase.LoginAction;
+import projekt.automatyzacja.utility.ExcelUtil;
 
 public class DeleteLeadTC {
 	
-	WebDriver driver;
-	Menu menu;
-	SpecificMenu specificMenu;
-	LeadsPage leadsPage;
-	CreateLeadPage createLeadPage;
-	LeadDetailsPage leadDetailsPage;
-	MassDeleteLeadsPage massDeleteLeadsPage;
-	int primaryResultsNumber;
-	int afterActionResultsNumber;
+	private WebDriver driver;
+	private static ExcelUtil excel;
+	private Menu menu;
+	private SpecificMenu specificMenu;
+	private LeadsPage leadsPage;
+	private CreateLeadPage createLeadPage;
+	private LeadDetailsPage leadDetailsPage;
+	private MassDeleteLeadsPage massDeleteLeadsPage;
+	private int primaryResultsNumber;
+	private int afterActionResultsNumber;
+	
+	private String firstName;
+	private String lastName;
+	
+	@Factory(dataProvider = "getData")
+    public DeleteLeadTC(	String firstName,
+    						String lastName)
+	{
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 	
   @BeforeClass
   public void setUp() {
@@ -71,7 +90,7 @@ public class DeleteLeadTC {
       
       leadsPage = new LeadsPage(driver);
 	  
-	  String searchText = "Weronika Rosztyn";
+	  String searchText = this.firstName + " " + this.lastName;
 	  leadsPage.textSearchBar(searchText);
 	  leadsPage.clickSearchBar();
 
@@ -108,6 +127,49 @@ public class DeleteLeadTC {
   
   @AfterClass
   public void afterClass() {
+	  driver.quit();
+  }
+  
+  @DataProvider
+  private static String[][] getData(ITestContext context) {
+
+	  excel = new ExcelUtil("deleteLead.xlsx", "Arkusz2"); 
+	  
+      int rowsNumber = excel.getNumberOfRows();
+      int cellsNumber = excel.getNumberOfCellsInARow(0);
+      
+	  System.out.println("ROWS "+rowsNumber);
+      
+	  List<List<String>> excelData = new ArrayList<List<String>>();
+	  
+      for(int i = 0; i < rowsNumber-1; i++) //Loop work for Rows
+      {            
+    	  List<String> sublist = new ArrayList<String>();
+    	  
+          for (int j = 0; j < cellsNumber; j++) //Loop work for colNum
+          {
+             String jCell = excel.getCellData(i+1, j); 
+          
+             if(jCell == "") sublist.add(null);
+             else sublist.add(jCell);       
+           }
+          
+          boolean nullsOnly = sublist.stream().noneMatch(Objects::nonNull);
+          if (!nullsOnly) excelData.add(sublist);
+      }
+      
+      
+      String[][] returnValues = new String[excelData.size()][cellsNumber];
+      
+      for(int i = 0; i < excelData.size(); i++) //Loop work for Rows
+      {            
+          for (int j = 0; j < cellsNumber; j++) //Loop work for colNum
+          {
+             String jCell = excelData.get(i).get(j);          
+         	 returnValues[i][j] = jCell; //This formatter get my all values as string i.e integer, float all type data value       
+           }
+      }
+      return returnValues;   
   }
   
 }
