@@ -7,47 +7,44 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Menu {
 
-	WebDriver driver;
-	
 	public Menu(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
 	@FindBy(linkText="Home")
-	WebElement homeButton;
+	private WebElement homeButton;
 	
 	@FindBy(partialLinkText="Inbox")
-	WebElement inboxButton;
+	private WebElement inboxButton;
 	
 	@FindBy(linkText="Accounts")
-	WebElement accountsButton;
+	private WebElement accountsButton;
 	
 	@FindBy(linkText="Leads")
-	WebElement leadsButton;
+	private WebElement leadsButton;
 	
 	@FindBy(linkText="Contacts")
-	WebElement contactsButton;
+	private WebElement contactsButton;
 	
 	@FindBy(linkText="Opportunities")
-	WebElement opportunitiesButton;
+	private WebElement opportunitiesButton;
 	
 	@FindBy(className="toggle-hidden-nav-items")
-	WebElement dotsButton;
+	private WebElement dotsButton;
 	
 	@FindBy(linkText="Marketing")
-	WebElement marketingButton;
+	private WebElement marketingButton;
 	
 	@FindBy(linkText="Projects")
-	WebElement projectsButton;
+	private WebElement projectsButton;
 	
 	@FindBy(linkText="Products")
-	WebElement productsButton;
+	private WebElement productsButton;
 	
 	@FindBy(linkText="Reports")
-	WebElement reportsButton;
+	private WebElement reportsButton;
 	
 	
 //METHODS ON OBJECTS

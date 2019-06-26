@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -16,16 +16,16 @@ public class LoginPage {
 // LOCATED OBJECTS	
 	
     @FindBy(id="LoginForm_username")
-	WebElement userName;
+	private WebElement userName;
 
     @FindBy(id="LoginForm_password")
-	WebElement password;
+	private WebElement password;
 	
 	@FindBy(id="Login")
-	WebElement signIn;
+	private WebElement signIn;
 	
 	@FindBy(id="LoginForm_password_em_")
-	WebElement passwordMessage;
+	private WebElement passwordMessage;
 	   
 // METHODS ON OBJECTS
 	  

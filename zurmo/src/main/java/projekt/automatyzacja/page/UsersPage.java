@@ -6,21 +6,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class UsersPage {
-	
-	WebDriver driver;
-	
+
 	public UsersPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
 	@FindBy(id="UsersSearchForm_anyMixedAttributes")
-	WebElement searchBar;
+	private WebElement searchBar;
 	
 	@FindBy(css=".odd > td:nth-child(2) > a:nth-child(1)")
-	WebElement tableFirstNamePosition;
+	private WebElement tableFirstNamePosition;
 	
 // METHODS ON OBJECTS
 	

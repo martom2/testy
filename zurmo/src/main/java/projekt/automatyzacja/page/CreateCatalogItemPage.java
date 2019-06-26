@@ -7,60 +7,57 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateCatalogItemPage {
-
-	WebDriver driver;
 	
 	public CreateCatalogItemPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
 	@FindBy(id="ProductTemplate_name")
-	WebElement name;
+	private WebElement name;
 	
 	@FindBy(id="ProductTemplate_description")
-	WebElement description;
+	private WebElement description;
 	
 	@FindBy(id="token-input-ProductTemplateCategoriesForm_ProductCategory_ids")
-	WebElement categories;
+	private WebElement categories;
 	
 	@FindBy(id="ProductTemplate_status_value")
-	WebElement status;
+	private WebElement status;
 	
 	@FindBy(id="ProductTemplate_status_value")
-	WebElement type;
+	private WebElement type;
 	
 	@FindBy(id="ProductTemplate_priceFrequency_value")
-	WebElement priceFrequency;
+	private WebElement priceFrequency;
 	
 	@FindBy(id="ProductTemplate_sellPriceFormula_type")
-	WebElement sellPriceFormula;
+	private WebElement sellPriceFormula;
 	
 	@FindBy(id="ProductTemplate_cost_currency_id")
-	WebElement costCurrency;
+	private WebElement costCurrency;
 	
 	@FindBy(id="ProductTemplate_cost_value")
-	WebElement costValue;
+	private WebElement costValue;
 	
 	@FindBy(id="ProductTemplate_listPrice_currency_id")
-	WebElement listPriceCurrency;
+	private WebElement listPriceCurrency;
 	
 	@FindBy(id="ProductTemplate_listPrice_value")
-	WebElement listPriceValue;
+	private WebElement listPriceValue;
 	
 	@FindBy(id="ProductTemplate_sellPrice_currency_id")
-	WebElement sellPriceCurrency;
+	private WebElement sellPriceCurrency;
 	
 	@FindBy(id="ProductTemplate_sellPrice_value")
-	WebElement sellPriceValue;
+	private WebElement sellPriceValue;
 	
 	@FindBy(linkText="Save")
-	WebElement saveButton;
+	private WebElement saveButton;
 	
 	@FindBy(linkText="Cancel")
-	WebElement cancelButton;
+	private WebElement cancelButton;
 	
 	
 // METHODS ON LOCATED OBJECTS

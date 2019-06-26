@@ -7,84 +7,81 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateAccountPage {
-
-	WebDriver driver;
 	
 	public CreateAccountPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
 	@FindBy(id="Account_name")
-	WebElement name;
+	private WebElement name;
 	
 	@FindBy(id="Account_officePhone")
-	WebElement officePhone;
+	private WebElement officePhone;
 	
 	@FindBy(id="Account_industry_value")
-	WebElement industry;
+	private WebElement industry;
 	
 	@FindBy(id="Account_officeFax")
-	WebElement officeFax;
+	private WebElement officeFax;
 	
 	@FindBy(id="Account_employees")
-	WebElement employees;
+	private WebElement employees;
 	
 	@FindBy(id="Account_annualRevenue")
-	WebElement annualRevenue;
+	private WebElement annualRevenue;
 	
 	@FindBy(id="Account_type_value")
-	WebElement type;
+	private WebElement type;
 	
 	@FindBy(id="Account_website")
-	WebElement website;
+	private WebElement website;
 	
 	@FindBy(id="Account_billingAddress_street1")
-	WebElement billingAddressStreet1;
+	private WebElement billingAddressStreet1;
 	
 	@FindBy(id="Account_billingAddress_street2")
-	WebElement billingAddressStreet2;
+	private WebElement billingAddressStreet2;
 	
 	@FindBy(id="Account_billingAddress_city")
-	WebElement billingAddressCity;
+	private WebElement billingAddressCity;
 	
 	@FindBy(id="Account_billingAddress_state")
-	WebElement billingAddressState;
+	private WebElement billingAddressState;
 	
 	@FindBy(id="Account_billingAddress_postalCode")
-	WebElement billingAddressPostalCode;
+	private WebElement billingAddressPostalCode;
 	
 	@FindBy(id="Account_billingAddress_country")
-	WebElement billingAddressCountry;
+	private WebElement billingAddressCountry;
 	
 	@FindBy(id="Account_shippingAddress_street1")
-	WebElement shippingAddressStreet1;
+	private WebElement shippingAddressStreet1;
 	
 	@FindBy(id="Account_shippingAddress_street2")
-	WebElement shippingAddressStreet2;
+	private WebElement shippingAddressStreet2;
 	
 	@FindBy(id="Account_shippingAddress_city")
-	WebElement shippingAddressCity;
+	private WebElement shippingAddressCity;
 	
 	@FindBy(id="Account_shippingAddress_state")
-	WebElement shippingAddressState;
+	private WebElement shippingAddressState;
 	
 	@FindBy(id="Account_shippingAddress_postalCode")
-	WebElement shippingAddressPostalCode;
+	private WebElement shippingAddressPostalCode;
 	
 	@FindBy(id="Account_shippingAddress_country")
-	WebElement shippingAddressCountry;
+	private WebElement shippingAddressCountry;
 	
 	@FindBy(id="Account_description")
-	WebElement description;
+	private WebElement description;
 	
 	@FindBy(linkText="Save")
-	WebElement saveButton;
+	private WebElement saveButton;
 	
 	@FindBy(linkText="Cancel")
-	WebElement cancelButton;
+	private WebElement cancelButton;
 
 	
 // METHODS ON OBJECTS

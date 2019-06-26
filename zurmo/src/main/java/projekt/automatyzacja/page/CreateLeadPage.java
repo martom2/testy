@@ -7,108 +7,105 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateLeadPage {
-
-	WebDriver driver;
 	
 	public CreateLeadPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
 	@FindBy(id="Contact_title_value")
-	WebElement politeReturn;
+	private WebElement politeReturn;
 	
 	@FindBy(id="Contact_firstName")
-	WebElement firstName;
+	private WebElement firstName;
 	
 	@FindBy(id="Contact_lastName")
-	WebElement lastName;
+	private WebElement lastName;
 	
 	@FindBy(id="Contact_state_id")
-	WebElement status;
+	private WebElement status;
 	
 	@FindBy(id="Contact_jobTitle")
-	WebElement jobTitle;
+	private WebElement jobTitle;
 	
 	@FindBy(id="Contact_companyName")
-	WebElement companyName;
+	private WebElement companyName;
 	
 	@FindBy(id="Contact_department")
-	WebElement department;
+	private WebElement department;
 	
 	@FindBy(id="Contact_officePhone")
-	WebElement officePhone;
+	private WebElement officePhone;
 	
 	@FindBy(id="Contact_source_value")
-	WebElement source;
+	private WebElement source;
 	
 	@FindBy(id="Contact_mobilePhone")
-	WebElement mobilePhone;
+	private WebElement mobilePhone;
 	
 	@FindBy(id="Contact_officeFax")
-	WebElement officeFax;
+	private WebElement officeFax;
 	
 	@FindBy(id="Contact_primaryEmail_emailAddress")
-	WebElement primaryEmail;
+	private WebElement primaryEmail;
 	
 	@FindBy(id="Contact_primaryEmail_optOut")
-	WebElement primaryEmailCheckbox;
+	private WebElement primaryEmailCheckbox;
 	
 	@FindBy(id="Contact_secondaryEmail_emailAddress")
-	WebElement secondaryEmail;
+	private WebElement secondaryEmail;
 	
 	@FindBy(id="Contact_primaryAddress_street1")
-	WebElement primaryAddressStreet1;
+	private WebElement primaryAddressStreet1;
 	
 	@FindBy(id="Contact_primaryAddress_street2")
-	WebElement primaryAddressStreet2;
+	private WebElement primaryAddressStreet2;
 	
 	@FindBy(id="Contact_primaryAddress_city")
-	WebElement primaryAddressCity;
+	private WebElement primaryAddressCity;
 	
 	@FindBy(id="Contact_primaryAddress_state")
-	WebElement primaryAddressState;
+	private WebElement primaryAddressState;
 	
 	@FindBy(id="Contact_primaryAddress_postalCode")
-	WebElement primaryAddressPostalCode;
+	private WebElement primaryAddressPostalCode;
 	
 	@FindBy(id="Contact_primaryAddress_country")
-	WebElement primaryAddressCountry;
+	private WebElement primaryAddressCountry;
 	
 	@FindBy(id="Contact_secondaryAddress_street1")
-	WebElement secondaryAddressStreet1;
+	private WebElement secondaryAddressStreet1;
 	
 	@FindBy(id="Contact_secondaryAddress_street2")
-	WebElement secondaryAddressStreet2;
+	private WebElement secondaryAddressStreet2;
 	
 	@FindBy(id="Contact_secondaryAddress_city")
-	WebElement secondaryAddressCity;
+	private WebElement secondaryAddressCity;
 	
 	@FindBy(id="Contact_secondaryAddress_state")
-	WebElement secondaryAddressState;
+	private WebElement secondaryAddressState;
 	
 	@FindBy(id="Contact_secondaryAddress_postalCode")
-	WebElement secondaryAddressPostalCode;
+	private WebElement secondaryAddressPostalCode;
 	
 	@FindBy(id="Contact_secondaryAddress_country")
-	WebElement secondaryAddressCountry;
+	private WebElement secondaryAddressCountry;
 	
 	@FindBy(id="Contact_industry_value")
-	WebElement industry;
+	private WebElement industry;
 	
 	@FindBy(id="Contact_website")
-	WebElement website;
+	private WebElement website;
 	
 	@FindBy(id="Contact_description")
-	WebElement description;
+	private WebElement description;
 	
 	@FindBy(linkText="Save")
-	WebElement saveButton;
+	private WebElement saveButton;
 	
 	@FindBy(linkText="Cancel")
-	WebElement cancelButton;
+	private WebElement cancelButton;
 	
 	
 	

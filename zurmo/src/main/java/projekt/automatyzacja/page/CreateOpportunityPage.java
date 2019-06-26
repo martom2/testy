@@ -7,54 +7,51 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateOpportunityPage {
-
-WebDriver driver;
 	
 	public CreateOpportunityPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 
 	@FindBy(id="Opportunity_name")
-	WebElement name;
+	private WebElement name;
 	
 	@FindBy(id="Opportunity_amount_currency_id")
-	WebElement amountCurrency;
+	private WebElement amountCurrency;
 	
 	@FindBy(id="Opportunity_amount_value")
-	WebElement amountValue;
+	private WebElement amountValue;
 	
 	@FindBy(id="Opportunity_account_name")
-	WebElement account;
+	private WebElement account;
 	
 	@FindBy(id="Opportunity_account_SelectLink")
-	WebElement accountSearch;
+	private WebElement accountSearch;
 	
 	@FindBy(id="Opportunity_closeDate")
-	WebElement closeDate;
+	private WebElement closeDate;
 	
 	@FindBy(className="ui-datepicker-trigger")
-	WebElement closeDateCalendar;
+	private WebElement closeDateCalendar;
 	
 	@FindBy(id="Opportunity_stage_value")
-	WebElement stage;
+	private WebElement stage;
 	
 	@FindBy(id="Opportunity_probability")
-	WebElement probability;
+	private WebElement probability;
 	
 	@FindBy(id="Opportunity_source_value")
-	WebElement source;
+	private WebElement source;
 	
 	@FindBy(id="Opportunity_description")
-	WebElement description;
+	private WebElement description;
 	
 	@FindBy(linkText="Save")
-	WebElement saveButton;
+	private WebElement saveButton;
 	
 	@FindBy(linkText="Cancel")
-	WebElement cancelButton;
+	private WebElement cancelButton;
 	
 	
 	

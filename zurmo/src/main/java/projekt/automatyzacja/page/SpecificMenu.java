@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SpecificMenu {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public SpecificMenu(WebDriver driver) {
 		this.driver = driver;
@@ -18,49 +18,49 @@ public class SpecificMenu {
 // LOCATED OBJECTS	
 	
 	@FindBy(css=".button-action")
-	WebElement createButton;
+	private WebElement createButton;
 	
 	@FindBy(linkText="Update")
-	WebElement updateMenuButton;
+	private WebElement updateMenuButton;
 	
 	@FindBy(id="list-view-massActionSelected")
-	WebElement updateSelectedSubButton;
+	private WebElement updateSelectedSubButton;
 	
 	@FindBy(id="list-view-massActionAll")
-	WebElement updateAllSubButton;
+	private WebElement updateAllSubButton;
 	
 	@FindBy(linkText="Export")
-	WebElement exportMenuButton;
+	private WebElement exportMenuButton;
 	
 	@FindBy(id="list-view-exportActionSelected")
-	WebElement exportSelectedSubButton;
+	private WebElement exportSelectedSubButton;
 	
 	@FindBy(id="list-view-exportActionAll")
-	WebElement exportAllSubButton;
+	private WebElement exportAllSubButton;
 	
 	@FindBy(linkText="Delete")
-	WebElement deleteMenuButton;
+	private WebElement deleteMenuButton;
 	
 	@FindBy(id="list-view-deleteMassActionSelected")
-	WebElement deleteSelectedSubButton;
+	private WebElement deleteSelectedSubButton;
 	
 	@FindBy(id="list-view-deleteMassActionAll")
-	WebElement deleteAllSubButton;
+	private WebElement deleteAllSubButton;
 	
 	@FindBy(linkText="Subscribe")
-	WebElement subscribeMenuButton;
+	private WebElement subscribeMenuButton;
 	
 	@FindBy(id="list-view-subscribeMassActionSelected")
-	WebElement subscribeSelectedSubButton;
+	private WebElement subscribeSelectedSubButton;
 	
 	@FindBy(id="list-view-subscribeMassActionAll")
-	WebElement subscribeAllSubButton;
+	private WebElement subscribeAllSubButton;
 	
 	@FindBy(linkText="Merge")
-	WebElement mergeMenuButton;
+	private WebElement mergeMenuButton;
 	
 	@FindBy(id="list-view-listViewMergeSelected")
-	WebElement mergeSelectedSubButton;
+	private WebElement mergeSelectedSubButton;
 	
 	
 // METHODS ON OBJECTS

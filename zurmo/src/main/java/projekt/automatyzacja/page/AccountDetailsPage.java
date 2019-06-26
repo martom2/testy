@@ -6,51 +6,48 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class AccountDetailsPage {
-
-	WebDriver driver;
 	
 	public AccountDetailsPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
 	@FindBy(id="sliding-panel-toggle")
-	WebElement switchViewButton;
+	private WebElement switchViewButton;
 	
     @FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)")
-	WebElement name;
+    private WebElement name;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)")
-	WebElement officePhone;
+	private WebElement officePhone;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)")
-	WebElement industry;
+	private WebElement industry;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)")
-	WebElement officeFax;
+	private WebElement officeFax;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)")
-	WebElement employees;
+	private WebElement employees;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)")
-	WebElement annualRevenue;
+	private WebElement annualRevenue;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)")
-	WebElement type;
+	private WebElement type;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)")
-	WebElement website;
+	private WebElement website;
 	
 	@FindBy(id="Account_billingAddress_MapLink")
-	WebElement billingAddressAll;
+	private WebElement billingAddressAll;
 	
 	@FindBy(id="Account_shippingAddress_MapLink")
-	WebElement shippingAddressAll;
+	private WebElement shippingAddressAll;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(2)")
-	WebElement description;
+	private WebElement description;
 	
 // METHODS ON LOCATED OBJECTS
 

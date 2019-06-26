@@ -7,23 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OpportunitiesPage {
 
-	WebDriver driver;
-	
 	public OpportunitiesPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 //LOCATED OBJEDCTS
 	
 	@FindBy(id="OpportunitiesSearchForm_anyMixedAttributes")
-	WebElement searchBar;
+	private WebElement searchBar;
 	
 	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(1) > label:nth-child(1)")
-	WebElement firstTableCheckbox;
+	private WebElement firstTableCheckbox;
 	
 	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)")
-	WebElement tableFirsyNamePosition;
+	private WebElement tableFirsyNamePosition;
 	
 //METHODS ON LOCATED OBJECTS
 	

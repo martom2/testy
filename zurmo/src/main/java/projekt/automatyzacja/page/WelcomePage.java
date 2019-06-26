@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WelcomePage {
 
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public WelcomePage(WebDriver driver) {
 		this.driver = driver;

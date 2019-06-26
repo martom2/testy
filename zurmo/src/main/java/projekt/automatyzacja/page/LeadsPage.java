@@ -6,30 +6,27 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LeadsPage {
-
-	WebDriver driver;
 	
 	public LeadsPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
 	@FindBy(id="LeadsSearchForm_anyMixedAttributes")
-	WebElement searchBar;
+	private WebElement searchBar;
 	
 	@FindBy(id="list-view-summary-clone")
-	WebElement numberOfSearchResults;
+	private WebElement numberOfSearchResults;
 	
 	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(1) > label:nth-child(1)")
-	WebElement firstTableCheckbox;
+	private WebElement firstTableCheckbox;
 	
 	@FindBy(css="tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)")
-	WebElement tableFirsyNamePosition;
+	private WebElement tableFirsyNamePosition;
 	
 	@FindBy(css=".jnotify-item > span:nth-child(3)")
-	WebElement alertMessage;
+	private WebElement alertMessage;
 	
 //METHODS ON OBJECTS
 	

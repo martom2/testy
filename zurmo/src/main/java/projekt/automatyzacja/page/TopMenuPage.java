@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TopMenuPage {
 
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public TopMenuPage(WebDriver driver) {
 		this.driver = driver;
@@ -18,13 +18,13 @@ public class TopMenuPage {
 // LOCATED OBJECTS
 	
 	@FindBy(linkText="Sign out")
-	WebElement signOutLink;
+	private WebElement signOutLink;
 	
 	@FindBy(linkText="Administration")
-	WebElement administrationIcon;
+	private WebElement administrationIcon;
 	
 	@FindBy(linkText="Users")
-	WebElement usersLink;
+	private WebElement usersLink;
 	
 	
 // METHODS ON OBJECTS

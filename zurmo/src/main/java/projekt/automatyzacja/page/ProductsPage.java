@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductsPage {
 
-WebDriver driver;
+	private WebDriver driver;
 	
 	public ProductsPage(WebDriver driver) {
 		this.driver = driver;
@@ -18,22 +18,23 @@ WebDriver driver;
 // LOCATED OBJECTS	
 	
 	@FindBy(linkText="Products")
-	WebElement products;
+	private WebElement products;
 	
 	@FindBy(linkText="Create Product")
-	WebElement createProduct;
+	private WebElement createProduct;
 	
 	@FindBy(linkText="Catalog Items")
-	WebElement catalogItems;
+	private WebElement catalogItems;
 	
 	@FindBy(linkText="Create Catalog Item")
-	WebElement createCatalogItem;
+	private WebElement createCatalogItem;
 	
 	@FindBy(linkText="Categories")
-	WebElement categories;
+	private WebElement categories;
 	
 	@FindBy(linkText="Create Category")
-	WebElement createCategory;
+	private WebElement createCategory;
+	
 	
 // METHODS ON OBJECTS
 	

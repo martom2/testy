@@ -7,21 +7,18 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class EditUserPage {
-
-	WebDriver driver;
 	
 	public EditUserPage(WebDriver driver){
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
 	@FindBy(id="User_userStatus")
-	WebElement status;
+	private WebElement status;
 	
 	@FindBy(linkText="Save")
-	WebElement saveButton;
+	private WebElement saveButton;
 	
 // METHODS ON OBJECTS
 	

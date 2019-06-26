@@ -3,7 +3,6 @@ package projekt.automatyzacja.test;
 import org.testng.annotations.Test;
 
 import projekt.automatyzacja.page.AccountDetailsPage;
-import projekt.automatyzacja.page.AccountsPage;
 import projekt.automatyzacja.page.CreateAccountPage;
 import projekt.automatyzacja.page.Menu;
 import projekt.automatyzacja.page.SpecificMenu;
@@ -39,7 +38,6 @@ public class CreateAccountTC {
 	private static ExcelUtil excel;
 	private Menu menu;
 	private SpecificMenu specificMenu;
-	private AccountsPage accountsPage;
 	private CreateAccountPage createAccountPage;
 	private AccountDetailsPage accountDetailsPage;
 	

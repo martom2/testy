@@ -7,65 +7,62 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ContactDetailsPage {
 
-	WebDriver driver;
-	
 	public ContactDetailsPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
 	@FindBy(css="#ContactDetailsAndRelationsView_11 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)")
-	WebElement optionsButton;
+	private WebElement optionsButton;
 	
 	@FindBy(linkText="Edit")
-	WebElement optionsEditSubButton;
+	private WebElement optionsEditSubButton;
 	
 	@FindBy(id="sliding-panel-toggle")
-	WebElement switchViewButton;
+	private WebElement switchViewButton;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)")
-	WebElement name;
+	private WebElement name;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)")
-	WebElement status;
+	private WebElement status;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)")
-	WebElement jobTitle;
+	private WebElement jobTitle;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)")
-	WebElement account;
+	private WebElement account;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)")
-	WebElement department;
+	private WebElement department;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)")
-	WebElement officePhone;
+	private WebElement officePhone;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)")
-	WebElement source;
+	private WebElement source;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)")
-	WebElement mobilePhone;
+	private WebElement mobilePhone;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(9) > td:nth-child(2)")
-	WebElement officeFax;
+	private WebElement officeFax;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(10) > td:nth-child(2) > a:nth-child(1)")
-	WebElement primaryEmail;
+	private WebElement primaryEmail;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(2) > a:nth-child(1)")
-	WebElement secondaryEmail;
+	private WebElement secondaryEmail;
 	
 	@FindBy(id="Contact_primaryAddress_MapLink")
-	WebElement primaryAddressAll;
+	private WebElement primaryAddressAll;
 	
 	@FindBy(css="#Contact_secondaryAddress_MapLink")
-	WebElement secondaryAddressAll;
+	private WebElement secondaryAddressAll;
 	
 	@FindBy(css="#zurmoView > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(14) > td:nth-child(2)")
-	WebElement description;
+	private WebElement description;
 	
 	
 //METHODS ON OBJECTS

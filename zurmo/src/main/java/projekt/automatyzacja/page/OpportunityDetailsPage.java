@@ -7,38 +7,35 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OpportunityDetailsPage {
 
-WebDriver driver;
-	
 	public OpportunityDetailsPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS	
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)")
-	WebElement name;
+	private WebElement name;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2)")
-	WebElement amount;
+	private WebElement amount;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(3) > td:nth-child(2)")
-	WebElement account;
+	private WebElement account;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(4) > td:nth-child(2)")
-	WebElement closeDate;
+	private WebElement closeDate;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)")
-	WebElement stage;
+	private WebElement stage;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(6) > td:nth-child(2)")
-	WebElement probability;
+	private WebElement probability;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(7) > td:nth-child(2)")
-	WebElement source;
+	private WebElement source;
 	
 	@FindBy(css="div.left-column:nth-child(1) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(8) > td:nth-child(2)")
-	WebElement description;
+	private WebElement description;
 	
 	
 //METHODS ON OBJECTS

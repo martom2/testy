@@ -6,18 +6,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class UserDetailsPage {
-
-	WebDriver driver;
 	
 	public UserDetailsPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
 	@FindBy(linkText="Edit")
-	WebElement editButton;
+	private WebElement editButton;
 	
 // METHODS ON OBJECTS
 	

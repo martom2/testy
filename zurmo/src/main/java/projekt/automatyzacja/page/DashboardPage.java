@@ -6,21 +6,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class DashboardPage {
-
-	WebDriver driver;
 	
 	public DashboardPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
 // LOCATED OBJECTS
 	
 	@FindBy(id="SocialItem_description")
-	WebElement postTextBox;
+	private WebElement postTextBox;
 	
 	@FindBy(id="savePost")
-	WebElement postButton;
+	private WebElement postButton;
 	
 // METHODS ON OBJECTS
 
