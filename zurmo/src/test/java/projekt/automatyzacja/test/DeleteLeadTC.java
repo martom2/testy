@@ -21,8 +21,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
-import projekt.automatyzacja.page.CreateLeadPage;
-import projekt.automatyzacja.page.LeadDetailsPage;
 import projekt.automatyzacja.page.LeadsPage;
 import projekt.automatyzacja.page.MassDeleteLeadsPage;
 import projekt.automatyzacja.page.Menu;
@@ -37,8 +35,6 @@ public class DeleteLeadTC {
 	private Menu menu;
 	private SpecificMenu specificMenu;
 	private LeadsPage leadsPage;
-	private CreateLeadPage createLeadPage;
-	private LeadDetailsPage leadDetailsPage;
 	private MassDeleteLeadsPage massDeleteLeadsPage;
 	private int primaryResultsNumber;
 	private int afterActionResultsNumber;
@@ -94,7 +90,7 @@ public class DeleteLeadTC {
 	  leadsPage.textSearchBar(searchText);
 	  leadsPage.clickSearchBar();
 
-	  (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElement(By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)"), searchText));
+	  (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)"), searchText));
       
 	  // find number of search results from String
 	  String resultsString = leadsPage.readNumberOfSearchResults();

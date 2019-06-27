@@ -23,19 +23,13 @@ public class LoginTC {
 	private LoginPage loginPage;
 	private WelcomePage welcomePage;
 
-	private String firstName;
-	private String lastName;
 	private String userLogin;
 	private String userPassword;
 	
 	@Factory(dataProvider = "getData")
-    public LoginTC(	String firstName,
-		    		String lastName,
-		    		String userLogin,
+    public LoginTC(	String userLogin,
 		    		String userPassword) 
 	{
-		this.firstName = firstName;
-		this.lastName = lastName;
 		this.userLogin = userLogin;
 		this.userPassword = userPassword;		
 	}

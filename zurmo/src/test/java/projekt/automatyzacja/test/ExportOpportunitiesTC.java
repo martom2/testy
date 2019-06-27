@@ -78,7 +78,7 @@ public class ExportOpportunitiesTC {
 	 opportunitiesPage.textSearchBar(searchText);
 	 opportunitiesPage.clickSearchBar();
 	  
-     (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElement(By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)"), searchText));
+     (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)"), searchText));
 
      opportunitiesPage.selectFirstTableCheckbox();
      

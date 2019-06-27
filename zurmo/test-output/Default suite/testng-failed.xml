@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projekt.automatyzacja.test.DeleteLeadTC">
+      <class name="projekt.automatyzacja.test.CreateOpportunityTC">
         <methods>
-          <include name="deleteLead"/>
-          <include name="afterClass"/>
+          <include name="verifyCreatedOpportunity"/>
           <include name="setUp"/>
-          <include name="verifyDeletion"/>
+          <include name="createOpportunity"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- projekt.automatyzacja.test.DeleteLeadTC -->
+      </class> <!-- projekt.automatyzacja.test.CreateOpportunityTC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

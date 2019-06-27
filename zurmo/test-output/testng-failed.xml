@@ -1,48 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projekt.automatyzacja.test.CreateCatalogItemTC2">
+      <class name="projekt.automatyzacja.test.CreateOpportunityTC">
         <methods>
-          <include name="createCatalogItem"/>
-          <include name="setUp"/>
-          <include name="afterClass"/>
-          <include name="verifyCreatedCatalogItem"/>
-        </methods>
-      </class> <!-- projekt.automatyzacja.test.CreateCatalogItemTC2 -->
-      <class name="projekt.automatyzacja.test.DeactivateUserTC">
-        <methods>
-          <include name="afterSuite"/>
-          <include name="verifyDeactivationOfUser"/>
-          <include name="deactivateUser"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- projekt.automatyzacja.test.DeactivateUserTC -->
-      <class name="projekt.automatyzacja.test.CreateOpportunityTC2">
-        <methods>
-          <include name="createOpportunity"/>
           <include name="verifyCreatedOpportunity"/>
           <include name="setUp"/>
+          <include name="createOpportunity"/>
           <include name="afterSuite"/>
         </methods>
-      </class> <!-- projekt.automatyzacja.test.CreateOpportunityTC2 -->
-      <class name="projekt.automatyzacja.test.DeleteLeadTC">
-        <methods>
-          <include name="deleteLead"/>
-          <include name="afterClass"/>
-          <include name="setUp"/>
-          <include name="verifyDeletion"/>
-        </methods>
-      </class> <!-- projekt.automatyzacja.test.DeleteLeadTC -->
-      <class name="projekt.automatyzacja.test.CreateLeadTC2">
-        <methods>
-          <include name="setUp"/>
-          <include name="createLead"/>
-          <include name="verifyCreatedLead"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- projekt.automatyzacja.test.CreateLeadTC2 -->
+      </class> <!-- projekt.automatyzacja.test.CreateOpportunityTC -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

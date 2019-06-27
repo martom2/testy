@@ -93,7 +93,7 @@ public class DeactivateUserTC {
 		String searchText = this.firstName + " " + this.lastName;
 		usersPage.textSearchBar(searchText);
 		usersPage.clickSearchBar();
-		 (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElement(By.cssSelector(".odd > td:nth-child(2) > a:nth-child(1)"), searchText));
+		 (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(".odd > td:nth-child(2) > a:nth-child(1)"), searchText));
 		usersPage.clickTableFirstNamePosition();
 		
 		usersDetailsPage = new UserDetailsPage(driver);
@@ -118,7 +118,7 @@ public class DeactivateUserTC {
 		  
 		  loginPage = new LoginPage(driver);
 		  
-		  (new WebDriverWait(driver, 30)).until(ExpectedConditions.textToBePresentInElement(By.id("LoginForm_password_em_"), "Incorrect username or password."));
+		  (new WebDriverWait(driver, 30)).until(ExpectedConditions.textToBePresentInElementLocated(By.id("LoginForm_password_em_"), "Incorrect username or password."));
 		
 		  Assert.assertEquals("Incorrect username or password.", loginPage.getPasswordMessage());
 		  

@@ -1,5 +1,6 @@
 package projekt.automatyzacja.page;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +27,7 @@ public class UsersPage {
 	}
 	
 	public void clickSearchBar(){
-		this.searchBar.click();
+		this.searchBar.sendKeys(Keys.ENTER);
 	}
 	
 	public void clickTableFirstNamePosition() {

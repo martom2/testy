@@ -128,9 +128,9 @@ public class CreateCatalogItemTC {
 	  createCatalogItemPage = new CreateCatalogItemPage(driver);
 	  createCatalogItemPage.textName(this.name);
 	  createCatalogItemPage.textDescription(this.description);
-	 // createCatalogItemPage.textCategories(this.categories);
+	  createCatalogItemPage.textCategories(this.categories);
 	  createCatalogItemPage.selectSource(this.status);
-	  createCatalogItemPage.selectType(1);
+	  createCatalogItemPage.selectType(this.type);
 	  createCatalogItemPage.selectPriceFrequency(this.priceFrequency);
 	  createCatalogItemPage.selectSellPriceFormula(this.sellPriceFormula);
 	  createCatalogItemPage.selectCostCurrency(this.costCurrency);
@@ -160,7 +160,7 @@ public class CreateCatalogItemTC {
 	  
 	  Assert.assertEquals(catalogItemDetailsPage.readName(), this.name);
 	  Assert.assertEquals(catalogItemDetailsPage.readDescription(), this.description);
-//	  Assert.assertEquals(catalogItemDetailsPage.readCategories(), this.categories);
+	  Assert.assertEquals(catalogItemDetailsPage.readCategories(), this.categories);
 	  Assert.assertEquals(catalogItemDetailsPage.readStatus(), this.status);
 	  Assert.assertEquals(catalogItemDetailsPage.readType(), "Product");
 	  Assert.assertEquals(catalogItemDetailsPage.readPriceFrequency(), this.priceFrequency);
@@ -173,7 +173,7 @@ public class CreateCatalogItemTC {
 
   @AfterClass
   public void afterClass() {
-	  driver.quit();
+	  //driver.quit();
   }
   
   

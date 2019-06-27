@@ -6,7 +6,6 @@ import projekt.automatyzacja.page.ContactDetailsPage;
 import projekt.automatyzacja.page.ContactsPage;
 import projekt.automatyzacja.page.CreateContactPage;
 import projekt.automatyzacja.page.Menu;
-import projekt.automatyzacja.page.SpecificMenu;
 import projekt.automatyzacja.testcase.LoginAction;
 import projekt.automatyzacja.utility.ExcelUtil;
 
@@ -36,7 +35,6 @@ public class EditContactTC {
 	private WebDriver driver;
 	private static ExcelUtil excel;
 	private Menu menu;
-	private SpecificMenu specificMenu;
 	private ContactsPage contactsPage;
 	private CreateContactPage createContactPage;
 	private ContactDetailsPage contactDetailsPage;
@@ -160,7 +158,7 @@ public class EditContactTC {
 	  contactsPage.textSearchBar(searchText);
 	  contactsPage.clickSearchBar();
 
-	  (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElement(By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)"), searchText));
+	  (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("tr.odd:nth-child(1) > td:nth-child(3) > a:nth-child(1)"), searchText));
 	  
 	  contactsPage.clickTableFirstNamePosition();
 	  

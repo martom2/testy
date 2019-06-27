@@ -6,9 +6,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -42,6 +40,7 @@ public class CreateOpportunityTC {
     private String name;
     private String amountCurrency;
     private String amountValue;
+    private String account;
     private String closeDate;
     private String stage;
     private String probability;
@@ -53,6 +52,7 @@ public class CreateOpportunityTC {
     public CreateOpportunityTC(    String name,
 						    	    String amountCurrency,
 						    	    String amountValue,
+						    	    String account,
 						    	    String closeDate,
 						    	    String stage,
 						    	    String probability,
@@ -62,6 +62,7 @@ public class CreateOpportunityTC {
         this.name = name;
         this.amountCurrency = amountCurrency;
         this.amountValue = amountValue;
+        this.account = account;
         this.closeDate = closeDate;
         this.stage = stage;
         this.probability = probability;
@@ -109,19 +110,12 @@ public class CreateOpportunityTC {
 	  createOpportunityPage.selectAmountCurrency(this.amountCurrency);
 	  createOpportunityPage.clearAmountValue();
 	  createOpportunityPage.textAmountValue(this.amountValue);
+	  createOpportunityPage.textAccount(this.account);
 	  createOpportunityPage.textCloseDate(this.closeDate);
 	  createOpportunityPage.selectStage(this.stage);
 	  createOpportunityPage.selectSource(this.source);
 	  createOpportunityPage.textDescription(this.description);
 	  createOpportunityPage.clickSaveButton();
-
-//	  try {
-//	  WebElement saveDuplicates = (new WebDriverWait(driver, 30))
-//			  .until(ExpectedConditions.presenceOfElementLocated(By.linkText("click here")));
-//	  saveDuplicates.click();
-//	  } catch (TimeoutException e) {
-//		  e.printStackTrace();
-//	  }
 	  
   }
   
@@ -135,10 +129,9 @@ public class CreateOpportunityTC {
 	  
 	  Assert.assertEquals(opportunityDetailsPage.readName(), this.name);
 	  Assert.assertEquals(opportunityDetailsPage.readAmount(), "$"+this.amountValue+".00");
-	//  Assert.assertEquals(opportunityDetailsPage.readIndustry() this.account);
+	  Assert.assertEquals(opportunityDetailsPage.readAccount(), this.account);
 	  Assert.assertEquals(opportunityDetailsPage.readCloseDate(), this.closeDate);
 	  Assert.assertEquals(opportunityDetailsPage.readStage(), this.stage);
-	//  Assert.assertEquals(opportunityDetailsPage.readAnnualRevenue(), this.probability);
 	  Assert.assertEquals(opportunityDetailsPage.readSource(), this.source);
 	  Assert.assertEquals(opportunityDetailsPage.readDescription(), this.description);
 	  
@@ -147,7 +140,7 @@ public class CreateOpportunityTC {
   
   @AfterClass
   public void afterSuite() {
-	  driver.quit();
+	  //driver.quit();
   }
 	
   @DataProvider

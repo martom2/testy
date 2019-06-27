@@ -93,8 +93,8 @@ public class ActivateUserTC {
 		String searchText = this.firstName + " " + this.lastName;
 		usersPage.textSearchBar(searchText);
 		usersPage.clickSearchBar();
-		 (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElement(By.cssSelector(".odd > td:nth-child(2) > a:nth-child(1)"), searchText));
-		usersPage.clickTableFirstNamePosition();
+		 (new WebDriverWait(driver, 60)).until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(".odd > td:nth-child(2) > a:nth-child(1)"), searchText));
+		 usersPage.clickTableFirstNamePosition();
 		
 		usersDetailsPage = new UserDetailsPage(driver);
 		usersDetailsPage.clickEditButton();
